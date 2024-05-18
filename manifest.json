@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik",
-  "version_number": "0.4.11",
+  "version_number": "0.4.12",
   "website_url": "https://www.ragnavik.com",
   "description": "Mods for the Ragnavik Valhiem server.",
   "dependencies": [
@@ -23,8 +23,8 @@
     "ValheimModding-Jotunn-2.20.0",
     "Smoothbrain-TargetPortal-1.1.19",
     "Advize-PlantEasily-1.8.0",
-    "KGvalheim-Marketplace_And_Server_NPCs_Revamped-9.2.9",
-    "Azumatt-AzuAntiCheat-4.3.6",
+    "KGvalheim-Marketplace_And_Server_NPCs_Revamped-9.3.1",
+    "Azumatt-AzuAntiCheat-4.3.7",
     "Smoothbrain-Groups-1.2.8",
     "ishid4-BetterArchery-1.9.5",
     "MathiasDecrock-PlanBuild-0.15.0",
@@ -43,7 +43,7 @@
     "denikson-BepInExPack_Valheim-5.4.2202",
     "Smoothbrain-SmoothSave-1.0.5",
     "CW_Jesse-BetterNetworking_Valheim-2.3.2",
-    "Smoothbrain-ComfortTweaks-3.3.0",
+    "Smoothbrain-ComfortTweaks-3.3.1",
     "Smoothbrain-ServerCharacters-1.4.11",
     "Smoothbrain-Farming-2.1.12",
     "Smoothbrain-Foraging-1.0.9",

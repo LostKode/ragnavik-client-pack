@@ -5,6 +5,11 @@ Mods required to play on the Ragnavik Valhiem Server. Want to play on the server
 ## Changelog
 
 <details>
+<summary>v0.4.12</summary>
+Update ComfortTweaks to v3.3.1, Marketplace_And_Server_NPCs_Revamped to v9.3.1, and AzuAntiCheat to v4.3.7.
+</details>
+
+<details>
 <summary>v0.4.11</summary>
 Update ComfortTweaks to v3.3.0, and OdinShip to v0.4.4. Removed Clutter due to being deprecated.
 </details>
