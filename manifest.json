@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik",
-  "version_number": "0.4.14",
+  "version_number": "0.4.15",
   "website_url": "https://www.ragnavik.com",
   "description": "Mods for the Ragnavik Valhiem server.",
   "dependencies": [
@@ -18,7 +18,7 @@
     "Advize-PlantEverything-1.17.3",
     "Azumatt-FirstPersonMode-1.3.3",
     "Azumatt-AzuCraftyBoxes-1.3.0",
-    "OdinPlus-OdinsFoodBarrels-1.0.20",
+    "OdinPlus-OdinsFoodBarrels-1.0.21",
     "blacks7ar-MagicPlugin-1.9.6",
     "ValheimModding-Jotunn-2.20.0",
     "Smoothbrain-TargetPortal-1.1.19",

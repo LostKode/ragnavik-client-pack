@@ -5,6 +5,11 @@ Want to join the adventure on the Ragnavik Valheim server? Make sure you have al
 ## Changelog
 
 <details>
+<summary>v0.4.15</summary>
+Update OdinPlus-OdinsFoodBarrels to v1.0.21.
+</details>
+
+<details>
 <summary>v0.4.14</summary>
 Add Mods:
 - **Azumatt-SleepSkip v1.1.1**: Enhances night-time gameplay by allowing players to skip sleeping periods.
