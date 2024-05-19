@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik",
-  "version_number": "0.4.16",
+  "version_number": "0.4.18",
   "website_url": "https://www.ragnavik.com",
   "description": "Mods for the Ragnavik Valhiem server.",
   "dependencies": [
@@ -10,7 +10,7 @@
     "Azumatt-AAA_Crafting-1.4.1",
     "RandyKnapp-EpicLoot-0.10.1",
     "Smoothbrain-PassivePowers-1.1.2",
-    "Therzie-Warfare-1.7.1",
+    "Therzie-Warfare-1.7.3",
     "Marlthon-OdinShip-0.4.4",
     "Marlthon-AirAnimals-0.1.8",
     "Marlthon-SeaAnimals-0.2.4",
