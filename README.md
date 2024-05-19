@@ -5,6 +5,11 @@ Want to join the adventure on the Ragnavik Valheim server? Make sure you have al
 ## Changelog
 
 <details>
+<summary>v0.4.16</summary>
+Update BetterWards to v1.9.2, and CraftyCartsRemake to v3.1.2. Add Intermission v1.5.0.
+</details>
+
+<details>
 <summary>v0.4.15</summary>
 Update OdinPlus-OdinsFoodBarrels to v1.0.21.
 </details>

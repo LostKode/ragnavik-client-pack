@@ -1,12 +1,12 @@
 {
   "name": "Ragnavik",
-  "version_number": "0.4.15",
+  "version_number": "0.4.16",
   "website_url": "https://www.ragnavik.com",
   "description": "Mods for the Ragnavik Valhiem server.",
   "dependencies": [
     "Digitalroot-Max_Dungeon_Rooms-2.0.32",
     "Azumatt-Build_Camera_Custom_Hammers_Edition-1.2.3",
-    "Azumatt-BetterWards-1.9.1",
+    "Azumatt-BetterWards-1.9.2",
     "Azumatt-AAA_Crafting-1.4.1",
     "RandyKnapp-EpicLoot-0.10.1",
     "Smoothbrain-PassivePowers-1.1.2",
@@ -59,7 +59,7 @@
     "Smoothbrain-Mining-1.1.5",
     "Smoothbrain-Blacksmithing-1.2.5",
     "Smoothbrain-Sailing-1.1.7",
-    "OdinPlus-CraftyCartsRemake-3.1.1",
+    "OdinPlus-CraftyCartsRemake-3.1.2",
     "Smoothbrain-DualWield-1.0.9",
     "RockerKitten-BoneAppetit-3.3.1",
     "neurodr0me-RRRNpcs-3.0.0",
@@ -82,6 +82,7 @@
     "Azumatt-AzuHoverStats-1.1.6",
     "Azumatt-MaxPlayerCount-1.2.3",
     "Smoothbrain-DarwinAwards-1.0.6",
-    "Azumatt-FastLink-1.4.2"
+    "Azumatt-FastLink-1.4.2",
+    "ComfyMods-Intermission-1.5.0"
 ]
 }
