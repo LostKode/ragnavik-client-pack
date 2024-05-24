@@ -5,6 +5,21 @@ Want to join the adventure on the Ragnavik Valheim server? Make sure you have al
 ## Changelog
 
 <details>
+<summary>v0.4.21</summary>
+Upgrade warefare to v1.7.4, odinsfoodbarrels to v1.0.24, magicplugin to v1.9.7. servercharacters to v1.4.12, and dragooncapes to v1.3.3.
+</details>
+
+<details>
+<summary>v0.4.20</summary>
+Correct mistake with version 0.4.19.
+</details>
+
+<details>
+<summary>v0.4.19</summary>
+Downgrade Warfare to v1.7.1. Issues with the latest version.
+</details>
+
+<details>
 <summary>v0.4.18</summary>
 Update Warfare to v1.7.3.
 </details>
