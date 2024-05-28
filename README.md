@@ -7,6 +7,7 @@ Want to join the adventure on the Ragnavik Valheim server? Make sure you have al
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| v0.4.24 | Upgrade OdinShip to v0.4.5, AirAnimals to v0.2.0, SeaAnimals to v0.2.6, and OdinsFoodBarrels to v1.0.25. |
 | v0.4.23  | Upgrade cooking to v1.1.16, jotunn to v1.20.1, wackyepicmmosystem to v1.9.13, and planbuild to v0.16.0. |
 | v0.4.22  | Upgrade aaa_crafting to v1.4.3, craftyboxes to v1.4.0, planteverything to v1.18.0, airanimals to v1.9.0, and seaanimals to v0.2.5. |
 | v0.4.21  | Upgrade warefare to v1.7.4, odinsfoodbarrels to v1.0.24, magicplugin to v1.9.7, servercharacters to v1.4.12, and dragooncapes to v1.3.3. |
