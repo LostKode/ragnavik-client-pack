@@ -4,3 +4,4 @@ Tip: Secure your base with wards. Access the ward menu by interacting with the w
 Tip: Expand your farming by planting a wider range of plants and trees. Use the hoe to prepare the ground and plant seeds from your inventory.
 Tip: Transport items and creatures through portals. Use the teleportation menu to select and move objects across your world.
 Tip: Plan your builds before construction. Use the plan hammer to design structures and place ghost versions of items to visualize your projects.
+Tip: If your UI bars are hanging off the screen, scale down the UI to 0.7 using the config editor in r2modman. For more info, visit our site.

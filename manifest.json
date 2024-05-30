@@ -1,14 +1,15 @@
 {
   "name": "Ragnavik",
-  "version_number": "0.4.24",
+  "version_number": "0.4.25",
   "website_url": "https://www.ragnavik.com",
   "description": "Mods for the Ragnavik Valhiem server.",
   "dependencies": [
     "Advize-PlantEasily-1.8.0",
     "Advize-PlantEverything-1.18.0",
     "Amar1729-BetterLadders-0.2.0",
-    "Azumatt-AAA_Crafting-1.4.3",
+    "Azumatt-AAA_Crafting-1.4.4",
     "Azumatt-AzuAntiCheat-4.3.7",
+    "Azumatt-AzuAutoStore-2.1.12",
     "Azumatt-AzuClock-1.0.3",
     "Azumatt-AzuCraftyBoxes-1.4.0",
     "Azumatt-AzuHoverStats-1.1.6",
@@ -18,6 +19,7 @@
     "Azumatt-FirstPersonMode-1.3.3",
     "Azumatt-MaxPlayerCount-1.2.3",
     "Azumatt-SleepSkip-1.1.1",
+    "Azumatt-Recycle_N_Reclaim-1.3.4",
     "BentoG-MissingPieces-2.2.0",
     "CW_Jesse-BetterNetworking_Valheim-2.3.2",
     "ComfyMods-Intermission-1.5.0",
@@ -27,7 +29,6 @@
     "Frenvius-Valharvest-3.1.2",
     "Goldenrevolver-Quick_Stack_Store_Sort_Trash_Restock-1.4.7",
     "HappyDragoon-DragoonCapes-1.3.3",
-    "JereKuusela-Server_devcommands-1.81.0",
     "KGvalheim-ItemDrawers-1.0.8",
     "KGvalheim-Marketplace_And_Server_NPCs_Revamped-9.3.1",
     "MSchmoecker-ItemHopper-1.5.0",
@@ -57,6 +58,7 @@
     "Smoothbrain-Evasion-1.0.3",
     "Smoothbrain-Farming-2.1.12",
     "Smoothbrain-Foraging-1.0.9",
+    "Smoothbrain-HildirsQuest-1.0.2",
     "Smoothbrain-Groups-1.2.8",
     "Smoothbrain-Guilds-1.1.8",
     "Smoothbrain-Lumberjacking-1.0.5",
@@ -70,11 +72,12 @@
     "Smoothbrain-SmoothSave-1.0.5",
     "Smoothbrain-TargetPortal-1.1.19",
     "Smoothbrain-Tenacity-1.0.3",
+    "plumga-Clutter-0.1.7",
     "Tekla-AutoRepair-5.4.1602",
     "Therzie-Warfare-1.7.4",
     "ValheimModding-HookGenPatcher-0.0.4",
     "ValheimModding-Jotunn-2.20.1",
-    "Vapok-AdventureBackpacks-1.7.6",
+    "VentureValheim-Venture_Location_Reset-0.9.0",
     "WackyMole-WackyEpicMMOSystem-1.9.13",
     "Xenofell-TorchesEternal-0.2.0",
     "blacks7ar-MagicPlugin-1.9.7",
@@ -85,6 +88,5 @@
     "neurodr0me-RRRCore-3.1.5",
     "neurodr0me-RRRMonsters-3.0.0",
     "neurodr0me-RRRNpcs-3.0.0"
-
 ]
 }
