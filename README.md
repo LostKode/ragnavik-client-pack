@@ -7,7 +7,7 @@ Want to join the adventure on the Ragnavik Valheim server? Make sure you have al
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
-| v0.4.25 | Upgrade AAA Crafting to v1.4.4. Add AzuAutoStore v2.1.12, Recycle N Reclaim v1.3.4, HildirsQuest v1.0.2, plumga clutter v0.1.7, and venture location reset v0.9.0. Fixed loadscreens to fit 16:9. Added tooltip   |
+| v0.4.25 | Upgrade AAA Crafting to v1.4.4. Add AzuAutoStore v2.1.12, Recycle N Reclaim v1.3.4, HildirsQuest v1.0.2, plumga clutter v0.1.7, and venture location reset v0.9.0. Fixed loadscreens to fit 16:9. Add new tooltip.  |
 | v0.4.24 | Upgrade OdinShip to v0.4.5, AirAnimals to v0.2.0, SeaAnimals to v0.2.6, and OdinsFoodBarrels to v1.0.25. |
 | v0.4.23  | Upgrade cooking to v1.1.16, jotunn to v1.20.1, wackyepicmmosystem to v1.9.13, and planbuild to v0.16.0. |
 | v0.4.22  | Upgrade aaa_crafting to v1.4.3, craftyboxes to v1.4.0, planteverything to v1.18.0, airanimals to v1.9.0, and seaanimals to v0.2.5. |
