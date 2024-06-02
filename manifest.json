@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik",
-  "version_number": "0.4.25",
+  "version_number": "0.4.26",
   "website_url": "https://www.ragnavik.com",
   "description": "Mods for the Ragnavik Valhiem server.",
   "dependencies": [
@@ -87,6 +87,9 @@
     "neurodr0me-RRRBetterRaids-2.2.0",
     "neurodr0me-RRRCore-3.1.5",
     "neurodr0me-RRRMonsters-3.0.0",
-    "neurodr0me-RRRNpcs-3.0.0"
+    "neurodr0me-RRRNpcs-3.0.0",
+    "ComfyMods-Gizmo-1.10.0",
+    "DrakeMods-More_Gates_PlusPlus-1.0.0",
+    "JereKuusela-Item_Stand_All_Items-1.21.0"
 ]
 }
