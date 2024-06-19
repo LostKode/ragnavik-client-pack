@@ -7,6 +7,7 @@ Want to join the adventure on the Ragnavik Valheim server? Make sure you have al
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| v0.4.29 | Upgrade Marketplace_And_Server_NPCs_Revamped to v9.3.3, WackyEpicMMOSystem to v1.9.14, TargetPortal to v1.1.20, MagicPlugin to v2.0.4, PlantEverything to v1.18.1, SearsCatalog to v1.5.1, AzuAutoStore to v3.0.1, FirstPersonMode to v1.3.5, Venture_Location_Reset to v0.9.1. |
 | v0.4.27 | Upgrade AAA Crafting to v1.4.5, AzuAutoStore to v3.0.0, PlantEasily to v1.8.1 CraftyBoxes to v1.4.3, MagicPlugin to v2.0.3, MarketPlace to v9.3.2, Backpack to v1.3.4, Blacksmithing to v2.3.0 and Warfare to v1.7.5.
 | v0.4.25 | Upgrade AAA Crafting to v1.4.4. Add AzuAutoStore v2.1.12, Recycle N Reclaim v1.3.4, HildirsQuest v1.0.2, plumga clutter v0.1.7, and venture location reset v0.9.0. Fixed loadscreens to fit 16:9. Add new tooltip.  |
 | v0.4.24 | Upgrade OdinShip to v0.4.5, AirAnimals to v0.2.0, SeaAnimals to v0.2.6, and OdinsFoodBarrels to v1.0.25. |
