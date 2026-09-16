@@ -1,12 +1,37 @@
 # Ragnavik Modpack
 
-Want to join the adventure on the Ragnavik Valheim server? Make sure you have all the required mods installed. For more details and to get started, visit [Ragnavik.com](https://ragnavik.com/).
+Want to join the adventure on the Ragnavik Valheim server? Make sure you have all the required mods installed. For approval, [join our Discord](https://discord.gg/TbmFWbkxZR) and DM the server owner with the Steam account you will use. See the [request to join page](https://ragnavik.vercel.app/join) for the full steps.
+
+Version 1.1.12 includes Ragnavik Server 1.0.12 and Ragnavik UI 1.0.2. The UI places armor, gold, weight, and trash in four aligned rows and restores the trash button's drag-to-delete behavior. Odin's Kingdom 1.5.7 fixes rain passing through its shader replacer and rain damaging roofs. The server only boss progress reporter exemption and SleepSkip countdown remain included. ConditionalConfigSync stays on the existing ProperPortals dependency path; no 1.0.8 upgrade is included.
+
+AzuAutoStore is already included. Press `.` to store inventory items into matching nearby containers, or middle-click one item to store only that item. Hotbar items are ignored by default.
 
 <details>
 <summary>Changelog</summary>
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.12  | Require Ragnavik Server 1.0.12 with Odin's Kingdom 1.5.7.<br>Require Ragnavik UI 1.0.2 for aligned inventory rows and a corrected trash drop target. |
+| 1.1.11  | Require Ragnavik Server 1.0.11 with OdinHorse 1.7.0 and its scoped sound patch.<br>Require Ragnavik UI 1.0.1 for the clock and inventory layout fix. |
+| 1.1.10  | Require Ragnavik Server 1.0.10 and remove the mistaken Ragnavik Progress client requirement. Retain the tested ProperPortals dependency version. |
+| 1.1.9   | Require Ragnavik Server 1.0.9 with the EpicMMO reload guard and compatible ShieldMeBruh 2.0.2 and XPortalNetworks 2.0.1. |
+| 1.1.8   | Install Ragnavik UI as its own mod dependency instead of bundling its files in the client pack. |
+| 1.1.7   | Place the clock display below the compass and the trash button below the gold row. |
+| 1.1.6   | Add a visible SleepSkip warning countdown, and require the server pack with the one-sleeper vote and anti-cheat allowlist update. |
+| 1.1.5   | Correct FastLink toggle values to hide the server address and port from both the menu and tooltip while retaining the working server shortcut. |
+| 1.1.4   | Remove Groups 1.2.10 after confirming that its Valheim 1.0 interface creates a blocking placeholder overlay over the intro and main menu. |
+| 1.1.3   | Suppress both Epic Loot's welcome panel and its separate core-config update prompt, preserving the normal Valheim intro and main menu. Hide FastLink addresses and ports from its panel and tooltip, and never display a saved password. |
+| 1.1.2   | Restore FastLink as a client-only server menu. Add CatosAntiCheat 1.0.4 to the shared core with the complete client quality-of-life allowlist, exact version checks, fail-closed enforcement, and private Discord rejection reporting. |
+| 1.1.1   | Require a fresh character for first enrollment. Previously played characters can no longer be imported into Ragnavik. The server remains authoritative after enrollment and permits multiple fresh characters per platform account for restarts and testing. |
+| 1.1.0   | Split gameplay and synchronized configuration into Ragnavik Server. Added tested Groups support and a conservative Epic MMO progression profile. Reduced recycling to 50 percent, doubled portal costs, protected portals from removal, disabled ground and leviathan resets, and retained 30 day dungeon resets. Current Guilds and Professions releases failed Valheim 1.0.12 testing and were not shipped. |
+| 1.0.11  | Selected Epic Loot's Balanced preset and disabled its startup welcome panel so it does not cover the intro video. |
+| 1.0.10  | Rebuilt the pack with the compatible requested mods plus current BepInEx and Jotunn pins. Uses XPortalNetworks instead of conflicting XPortal and the current SleepSkip fork. Uses Smoothbrain Backpacks with the Valheim 1.0 compatibility patch required by MagicRevamp. Includes RunicCharacterVault and the original Intermission artwork. Runtime testing excluded AzuAntiCheat and PlanBuild for confirmed Valheim 1.0 failures. |
+| 1.0.9   | Removed MultiUserChest and ItemHopper together. InventorySlots 1.4.15 remains enabled as the pack's inventory and shared-container implementation. |
+| 1.0.8   | Removed Exploration and PlanBuild after Valheim 1.0 startup compatibility failures. Removed HookGenPatcher because it was only required by PlanBuild. Retained InventorySlots 1.4.15. |
+| 1.0.7   | Replaced all previous Intermission artwork with eight original 21:9 Nordic loading screens. Important subjects remain inside a centered 16:9 safe area for standard and ultrawide displays. |
+| 1.0.6   | Updated all 14 available dependencies. Updated Runic Character Vault to 1.0.2 and removed Passive Powers 1.1.5 because it references a PlayerProfile field removed in Valheim 1.0, preventing new character creation. Replaced the deprecated XPortal Patched package with the official XPortal 1.2.25 Valheim 1.0 release. Added Warm Torches 1.0.0 and KillMeForMyPower 2.4.0. |
+| 1.0.5   | Added Valheim 1.0 replacements for Crafty Boxes, Backpacks, extended inventory, and server authoritative characters. Replaced Quick Stack with InventorySlots. Retained MultiUserChest because ItemHopper requires it. Crafty Carts remains disabled because no compatible Valheim 1.0 replacement is available. Removed client-unneeded server utilities MaxPlayerCount, SmoothSave, and Max Dungeon Rooms from the published pack. |
+| 1.0.0   | Refreshed 83 retained dependencies to their current Thunderstore versions for Valheim 1.0. Removed eight deprecated packages: BetterWards, ItemDrawers, Marketplace And Server NPCs Revamped, Warfare, RRRCore, RRRNpcs, RRRMonsters, and RRRBetterRaids. Retained AzuAntiCheat as a required part of the pack. |
 | 0.5.1   | Updated blacks7ar-MagicPlugin from 2.0.4 to 2.0.5, Updated ishid4-BetterArchery from 1.9.6 to 1.9.7, Updated Digitalroot-Max_Dungeon_Rooms from 2.0.32 to 2.0.34, Added VentureValheim-Venture_Floating_Items v0.2.2, Added Smoothbrain-Exploration v1.0.3, Removed castix-FloatingItems |
 | 0.5.0   | Updated ishid4-BetterArchery from 1.9.5 to 1.9.6, Added Azumatt-AzuExtendedPlayerInventory v1.4.3, Removed RandyKnapp-EquipmentAndQuickSlots (previously v2.1.13) |
 | v0.4.29 | Upgrade Marketplace_And_Server_NPCs_Revamped to v9.3.3, WackyEpicMMOSystem to v1.9.14, TargetPortal to v1.1.20, MagicPlugin to v2.0.4, PlantEverything to v1.18.1, SearsCatalog to v1.5.1, AzuAutoStore to v3.0.1, FirstPersonMode to v1.3.5, Venture_Location_Reset to v0.9.1. |
