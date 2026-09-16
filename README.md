@@ -1,4 +1,8 @@
-# Ragnavik Modpack
+# Ragnavik Client Pack
+
+This repository is the release source for the published `LostKode-Ragnavik` Thunderstore client pack. It contains the manifest, player-facing documentation, icon, client configuration and artwork, and the already-built client plugin shipped by the package. Server-pack content and custom-mod source live elsewhere.
+
+Run `python3 scripts/validate_package.py` before every change is merged or released. The check validates Thunderstore dependency syntax, package shape, and the required mapping from every client-only dependency to its `CatosAntiCheat_ExtraWhitelist.txt` plugin GUID. See [RELEASING.md](RELEASING.md) for the full release and deployment contract.
 
 Want to join the adventure on the Ragnavik Valheim server? Make sure you have all the required mods installed. For approval, [join our Discord](https://discord.gg/TbmFWbkxZR) and DM the server owner with the Steam account you will use. See the [request to join page](https://ragnavik.vercel.app/join) for the full steps.
 
