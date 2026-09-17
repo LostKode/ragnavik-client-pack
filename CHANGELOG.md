@@ -1,8 +1,12 @@
 # Changelog
 
+## 1.1.14
+
+* Simplify the Thunderstore Details page to explain what the pack is, how to install and use it, and how to join Ragnavik.
+
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
-| 1.1.13  | Require Ragnavik Server 1.0.13 with seven reviewed mod updates. Disable the Vapok startup splash and anonymous telemetry. Retain the ProperPortals ConditionalConfigSync dependency path. |
+| 1.1.13  | Require Ragnavik Server 1.0.13 with seven reviewed mod updates. Disable the Vapok startup splash and anonymous telemetry. |
 | 1.1.12  | Require Ragnavik Server 1.0.12 with Odin's Kingdom 1.5.7.<br>Require Ragnavik UI 1.0.2 for aligned inventory rows and a corrected trash drop target. |
 | 1.1.11  | Require Ragnavik Server 1.0.11 with OdinHorse 1.7.0 and its scoped sound patch.<br>Require Ragnavik UI 1.0.1 for the clock and inventory layout fix. |
 | 1.1.10  | Require Ragnavik Server 1.0.10 and remove the mistaken Ragnavik Progress client requirement. Retain the tested ProperPortals dependency version. |

@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik",
-  "version_number": "1.1.13",
+  "version_number": "1.1.14",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Client pack for Ragnavik. Includes the tested server core plus client interface and visual quality of life mods.",
   "dependencies": [
