@@ -1,6 +1,6 @@
 {
   "name": "Ragnavik",
-  "version_number": "1.1.15",
+  "version_number": "1.1.16",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Ragnavik is currently in private testing. Public access is not open yet.",
   "dependencies": [
