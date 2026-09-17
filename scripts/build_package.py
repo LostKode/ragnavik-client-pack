@@ -9,7 +9,7 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-INCLUDED = ("manifest.json", "README.md", "icon.png", "config", "plugins")
+INCLUDED = ("manifest.json", "README.md", "CHANGELOG.md", "icon.png", "config", "plugins")
 FIXED_TIME = (2020, 1, 1, 0, 0, 0)
 
 
