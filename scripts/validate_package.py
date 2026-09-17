@@ -16,7 +16,7 @@ DEPENDENCY = re.compile(
 )
 PACKAGE_KEY = re.compile(r"^[A-Za-z0-9_]+-[A-Za-z0-9_]+$")
 VERSION = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")
-REQUIRED = ("manifest.json", "README.md", "icon.png")
+REQUIRED = ("manifest.json", "README.md", "CHANGELOG.md", "icon.png")
 FORBIDDEN_PARTS = {
     "node_modules", "serverpack", "server-pack", "src", "source",
     "bin", "obj", "__pycache__",
