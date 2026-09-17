@@ -6,11 +6,11 @@ This repository is the release source for the published `LostKode-Ragnavik` Thun
 
 1. Start from a clean default branch.
 2. Update `manifest.json` with the intended client-pack version and exact dependency pins.
-3. Update the changelog in `README.md`.
+3. Update `CHANGELOG.md`. Keep `README.md` focused on the current package details shown by Thunderstore.
 4. Update `anti-cheat-contract.json` for every added, removed, or renamed client-only dependency or bundled client plugin.
 5. Rebuild the effective client and server manifests. Shared mods must use exact version checks. Every client-only plugin GUID must appear in `CatosAntiCheat_ExtraWhitelist.txt`. Every genuinely server-only plugin GUID must appear in `CatosAntiCheat_ServerOnly.txt`.
 6. Run `python3 scripts/validate_package.py`.
-7. Confirm that only `manifest.json`, `README.md`, `icon.png`, `config/`, and `plugins/` enter the Thunderstore archive. Do not include repository metadata, release ZIPs, caches, dependency folders, secrets, or source projects.
+7. Confirm that only `manifest.json`, `README.md`, `CHANGELOG.md`, `icon.png`, `config/`, and `plugins/` enter the Thunderstore archive. Do not include repository metadata, release ZIPs, caches, dependency folders, secrets, or source projects.
 8. Create and publish a corresponding Ragnavik website blog post. The client-pack release must not be published without its blog post.
 9. Publish the package through the established Thunderstore release workflow.
 
