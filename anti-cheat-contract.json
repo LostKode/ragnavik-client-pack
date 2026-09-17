@@ -15,8 +15,6 @@
     "ComfyMods-Intermission": "redseiko.valheim.intermission",
     "Azumatt-FastLink": "Azumatt.FastLink"
   },
-  "bundled_client_plugins": {
-    "plugins/RagnavikSleepTimer/RagnavikSleepTimer.dll": "LostKode.RagnavikSleepTimer"
-  },
+  "bundled_client_plugins": {},
   "server_pack_prefix": "LostKode-Ragnavik_Server-"
 }

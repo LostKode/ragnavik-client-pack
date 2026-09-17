@@ -6,6 +6,8 @@ Run `python3 scripts/validate_package.py` before every change is merged or relea
 
 Want to join the adventure on the Ragnavik Valheim server? Make sure you have all the required mods installed. For approval, [join our Discord](https://discord.gg/TbmFWbkxZR) and DM the server owner with the Steam account you will use. See the [request to join page](https://ragnavik.vercel.app/join) for the full steps.
 
+Version 1.1.14 replaces the unofficial SleepSkip rebuild and separate Ragnavik Sleep Timer with Ragnavik Sleep Skip 1.0.0 through Server 1.0.14. The new shared mod provides server-authoritative voting and the visible countdown in one package.
+
 Version 1.1.13 includes Ragnavik Server 1.0.13 and Ragnavik UI 1.0.2. The server pack updates Warfare to 1.9.2, OdinShip to 0.8.1, Odin's Kingdom to 1.5.8, Better Beehives to 1.3.0, and Epic Loot to 0.14.7. ConditionalConfigSync stays on the version required by ProperPortals 1.4.3. ShieldMeBruh and XPortalNetworks remain on their reviewed versions pending explicit review of newer telemetry and startup splash behavior.
 
 <details>
@@ -13,6 +15,7 @@ Version 1.1.13 includes Ragnavik Server 1.0.13 and Ragnavik UI 1.0.2. The server
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.14  | Require Ragnavik Server 1.0.14 and replace the separate SleepSkip fork and timer DLL with Ragnavik Sleep Skip 1.0.0. |
 | 1.1.13  | Require Ragnavik Server 1.0.13 with reviewed Warfare, OdinShip, Odin's Kingdom, Better Beehives, and Epic Loot updates. Retain the ProperPortals ConditionalConfigSync dependency path. |
 | 1.1.12  | Require Ragnavik Server 1.0.12 with Odin's Kingdom 1.5.7.<br>Require Ragnavik UI 1.0.2 for aligned inventory rows and a corrected trash drop target. |
 | 1.1.11  | Require Ragnavik Server 1.0.11 with OdinHorse 1.7.0 and its scoped sound patch.<br>Require Ragnavik UI 1.0.1 for the clock and inventory layout fix. |
