@@ -1,8 +1,12 @@
 # Ragnavik
 
-Ragnavik is the official client modpack for the private Ragnavik Valheim server. It installs the required gameplay mods, synchronized configuration, and interface updates in one package.
+Ragnavik is currently in a private testing phase. We are testing the mod profile, balance, compatibility, and server stability with a small invited group.
 
-## Install and play
+Public access is not open yet. We will announce when Ragnavik is ready for more players.
+
+## Current testers
+
+If you have already been invited to test Ragnavik:
 
 1. Create a fresh Valheim profile in Thunderstore Mod Manager or r2modman.
 2. Install **Ragnavik** by LostKode.
@@ -11,6 +15,4 @@ Ragnavik is the official client modpack for the private Ragnavik Valheim server.
 
 ## Join Ragnavik
 
-Join the [Ragnavik Discord](https://discord.gg/TbmFWbkxZR), then send the server owner the Steam account you will use so it can be approved.
-
-After approval, launch the modded profile and select Ragnavik from the FastLink menu. Full instructions are available on the [request to join page](https://ragnavik.vercel.app/join).
+Read the current access status and future joining steps on the [request page](https://ragnavik.vercel.app/join).
