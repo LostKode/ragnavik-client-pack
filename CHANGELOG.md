@@ -1,8 +1,12 @@
 # Changelog
 
-## 1.1.14
+## 1.1.15
 
 * Mark Ragnavik as being in private testing and replace the public access invitation with a link to the current request page.
+
+## 1.1.14
+
+* Simplify the Thunderstore Details page to explain what the pack is, how to install and use it, and how to join Ragnavik.
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
