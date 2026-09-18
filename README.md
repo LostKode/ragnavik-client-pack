@@ -15,9 +15,9 @@ THIRD_PARTY_NOTICES.md.
 
 If you have already been invited to test Ragnavik:
 
-1. Create a fresh Valheim profile in Thunderstore Mod Manager or r2modman.
-2. Install **Ragnavik** by LostKode.
-3. Start Valheim using **Start modded**.
+1. Install the current **Ragnavik** client package from Hexium.
+2. Import it into a fresh Valheim profile.
+3. Start Valheim with the imported profile.
 4. Use a new character that has not played on another world before joining Ragnavik for the first time.
 
 ## Join Ragnavik
