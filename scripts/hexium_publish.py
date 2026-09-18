@@ -8,6 +8,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.request
 import zipfile
 from pathlib import Path
@@ -104,15 +105,38 @@ def prepare(args: argparse.Namespace) -> None:
     }, indent=2))
 
 
+def current_version(name: str) -> str | None:
+    url = f"https://valheim.hexium.gg/mods/LostKode/{name}"
+    request = urllib.request.Request(url, headers={"User-Agent": "Ragnavik release validation"})
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            page = response.read().decode("utf-8")
+    except urllib.error.HTTPError as error:
+        if error.code == 404:
+            return None
+        raise
+    for payload in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.DOTALL):
+        metadata = json.loads(payload)
+        if metadata.get("@type") == "SoftwareApplication" and isinstance(metadata.get("softwareVersion"), str):
+            return metadata["softwareVersion"]
+    fail(f"Hexium page did not expose structured version metadata: {url}")
+
+
+def current(args: argparse.Namespace) -> None:
+    print(current_version(args.name) or "")
+
+
 def verify(args: argparse.Namespace) -> None:
     url = f"https://valheim.hexium.gg/mods/LostKode/{args.name}"
     for attempt in range(1, 13):
         try:
-            with urllib.request.urlopen(url, timeout=30) as response:
-                if response.status == 200:
-                    print(f"verified LostKode-{args.name}-{args.version} at {url}")
+            published = current_version(args.name)
+            if published == args.version:
+                print(f"verified LostKode-{args.name}-{args.version} at {url}")
                 return
-        except Exception as error:  # Storefront propagation can briefly return 404.
+            detail = "not published" if published is None else f"currently exposes {published}"
+            print(f"verification attempt {attempt}/12: {detail}", file=sys.stderr)
+        except Exception as error:
             print(f"verification attempt {attempt}/12: {error}", file=sys.stderr)
         time.sleep(10)
     fail(f"Hexium did not expose LostKode-{args.name}-{args.version} at {url}")
@@ -131,6 +155,9 @@ def main() -> None:
     prep.add_argument("--repository", default="https://hexium.gg")
     prep.add_argument("--output", type=Path, required=True)
     prep.set_defaults(func=prepare)
+    live = commands.add_parser("current")
+    live.add_argument("--name", required=True)
+    live.set_defaults(func=current)
     check = commands.add_parser("verify")
     check.add_argument("--name", required=True)
     check.add_argument("--version", required=True)

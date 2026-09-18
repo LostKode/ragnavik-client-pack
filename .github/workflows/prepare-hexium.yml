@@ -1,16 +1,13 @@
-name: Publish to Hexium
-run-name: Hexium ${{ inputs.release_id }} ${{ inputs.expected_version }}
+name: Coordinated Client release
+run-name: Coordinated Client release ${{ github.run_id }}
 
 on:
+  schedule:
+    - cron: "0 7,8 * * *"
   workflow_dispatch:
-    inputs:
-      release_id: {description: Shared release train identifier, required: true, type: string}
-      expected_version: {description: Expected package version, required: true, type: string}
-      blog_url: {description: Published Ragnavik release blog URL, required: true, type: string}
-      publish: {description: Upload after validation, required: true, default: true, type: boolean}
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: hexium-ragnavik-client
@@ -21,51 +18,102 @@ jobs:
     runs-on: ${{ vars.RELEASE_RUNNER || 'ubuntu-latest' }}
     environment: hexium-production
     steps:
+      - name: Enforce 2:00 AM America/Chicago cutoff
+        if: github.event_name == 'schedule'
+        run: test "$(TZ=America/Chicago date +%H:%M)" = "02:00"
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "8.0.x"
-      - run: PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_package.py
+          path: client
+          fetch-depth: 0
+      - uses: actions/checkout@v4
+        with: {repository: LostKode/ragnavik-compat, path: sources/ragnavik-compat}
+      - uses: actions/checkout@v4
+        with: {repository: LostKode/ragnavik-ui, path: sources/ragnavik-ui}
+      - uses: actions/checkout@v4
+        with: {repository: LostKode/ragnavik-server-bridge, path: sources/ragnavik-server-bridge}
+      - uses: actions/checkout@v4
+        with: {repository: LostKode/ragnavik-server-pack, path: sources/ragnavik-server-pack}
+      - uses: actions/checkout@v4
+        with:
+          repository: LostKode/ragnavik
+          path: website
+          token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
+      - uses: actions/setup-dotnet@v4
+        with: {dotnet-version: "8.0.x"}
+      - name: Require release credentials
+        env:
+          HEXIUM_AUTH_TOKEN: ${{ secrets.HEXIUM_AUTH_TOKEN }}
+          RELEASE_AUTOMATION_TOKEN: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
+        run: test -n "$HEXIUM_AUTH_TOKEN" && test -n "$RELEASE_AUTOMATION_TOKEN"
+      - name: Resolve Client version and public state
+        working-directory: client
+        run: |
+          version=$(python3 -c 'import json; print(json.load(open("manifest.json"))["version_number"])')
+          public_version=$(python3 scripts/hexium_publish.py current --name Ragnavik)
+          if [[ "$public_version" == "$version" ]]; then
+            echo "Ragnavik $version is already public; nothing to release."
+            echo "SKIP_RELEASE=true" >> "$GITHUB_ENV"
+          else
+            echo "EXPECTED_VERSION=$version" >> "$GITHUB_ENV"
+            echo "SKIP_RELEASE=false" >> "$GITHUB_ENV"
+          fi
+      - name: Gather public component releases at cutoff
+        if: env.SKIP_RELEASE != 'true'
+        working-directory: client
+        run: python3 scripts/prepare_coordinated_release.py --sources ../sources --website ../website --output release.json
+      - name: Validate Client Pack
+        if: env.SKIP_RELEASE != 'true'
+        working-directory: client
+        run: PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_package.py
+      - name: Commit coordinated source updates
+        if: env.SKIP_RELEASE != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
+        run: |
+          git -C client config user.name "Ragnavik Release Bot"
+          git -C client config user.email "release-bot@users.noreply.github.com"
+          git -C client add manifest.json CHANGELOG.md
+          git -C client diff --cached --quiet || git -C client commit -m "chore: coordinate Client $EXPECTED_VERSION release"
+          git -C client push origin HEAD:main
+          git -C website config user.name "Ragnavik Release Bot"
+          git -C website config user.email "release-bot@users.noreply.github.com"
+          git -C website add src/data/changelog.ts src/app/blog
+          git -C website diff --cached --quiet || git -C website commit -m "docs: announce Client $EXPECTED_VERSION"
+          git -C website push origin HEAD:main
+      - name: Wait for public release post
+        if: env.SKIP_RELEASE != 'true'
+        working-directory: client
+        run: |
+          blog_url=$(python3 -c 'import json; print(json.load(open("release.json"))["blog_url"])')
+          for attempt in {1..30}; do curl --fail --silent --show-error "$blog_url" >/dev/null && break; sleep 10; done
+          curl --fail --silent --show-error "$blog_url" >/dev/null
+          echo "BLOG_URL=$blog_url" >> "$GITHUB_ENV"
       - name: Build release artifact with private FastLink data
+        if: env.SKIP_RELEASE != 'true'
+        working-directory: client
         env:
           RAGNAVIK_SERVER_ADDRESS: ${{ secrets.RAGNAVIK_SERVER_ADDRESS }}
           RAGNAVIK_SERVER_PORT: ${{ secrets.RAGNAVIK_SERVER_PORT }}
         run: python3 scripts/build_package.py
-      - run: dotnet tool restore
-      - name: Prepare Hexium release metadata
+      - if: env.SKIP_RELEASE != 'true'
+        working-directory: client
+        run: dotnet tool restore
+      - name: Prepare Hexium metadata
+        if: env.SKIP_RELEASE != 'true'
+        working-directory: client
         run: >-
-          python3 scripts/hexium_publish.py prepare
-          --manifest manifest.json
-          --package "dist/LostKode-Ragnavik-${{ inputs.expected_version }}.zip"
-          --expected-version "${{ inputs.expected_version }}"
-          --release-id "${{ inputs.release_id }}"
-          --blog-url "${{ inputs.blog_url }}"
-          --repository https://hexium.gg
+          python3 scripts/hexium_publish.py prepare --manifest manifest.json
+          --package "dist/LostKode-Ragnavik-$EXPECTED_VERSION.zip"
+          --expected-version "$EXPECTED_VERSION" --release-id "${{ github.run_id }}"
+          --blog-url "$BLOG_URL" --repository https://hexium.gg
           --category modpacks --category client-side --category "Valheim 1.0"
           --output .tcli/hexium.toml
-      - uses: actions/upload-artifact@v4
-        with:
-          name: LostKode-Ragnavik-${{ inputs.expected_version }}
-          path: dist/LostKode-Ragnavik-${{ inputs.expected_version }}.zip
-          if-no-files-found: error
-      - name: Require Hexium token for publication
-        if: inputs.publish
-        env:
-          HEXIUM_AUTH_TOKEN: ${{ secrets.HEXIUM_AUTH_TOKEN }}
-        run: test -n "$HEXIUM_AUTH_TOKEN"
-      - name: Publish package
-        if: inputs.publish
-        env:
-          HEXIUM_AUTH_TOKEN: ${{ secrets.HEXIUM_AUTH_TOKEN }}
-        run: >-
-          dotnet tool run tcli publish
-          --config-path .tcli/hexium.toml
-          --file "dist/LostKode-Ragnavik-${{ inputs.expected_version }}.zip"
-          --token "$HEXIUM_AUTH_TOKEN"
-      - name: Verify public package
-        if: inputs.publish
-        run: >-
-          python3 scripts/hexium_publish.py verify
-          --repository https://hexium.gg
-          --name Ragnavik
-          --version "${{ inputs.expected_version }}"
+      - name: Publish Client Pack
+        if: env.SKIP_RELEASE != 'true'
+        working-directory: client
+        env: {HEXIUM_AUTH_TOKEN: "${{ secrets.HEXIUM_AUTH_TOKEN }}"}
+        run: dotnet tool run tcli publish --config-path .tcli/hexium.toml --file "dist/LostKode-Ragnavik-$EXPECTED_VERSION.zip" --token "$HEXIUM_AUTH_TOKEN"
+      - name: Verify exact public Client version
+        if: env.SKIP_RELEASE != 'true'
+        working-directory: client
+        run: python3 scripts/hexium_publish.py verify --name Ragnavik --version "$EXPECTED_VERSION"
