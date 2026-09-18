@@ -15,6 +15,10 @@ DEPENDENCY = re.compile(r"^[A-Za-z0-9_]+-[A-Za-z0-9_]+-\d+\.\d+\.\d+(?:-(?:alpha
 IDENTITY = re.compile(r"^(?P<namespace>[A-Za-z0-9_]+)-(?P<name>[A-Za-z0-9_]+)$")
 VERSION = re.compile(r"^\d+\.\d+\.\d+(?:-(?:alpha|beta|rc)\.\d+)?$")
 REQUIRED_ROOT_FILES = {"manifest.json", "README.md", "icon.png"}
+PRIVATE_TEMPLATE_TOKENS = (
+    b"__RAGNAVIK_SERVER_ADDRESS__",
+    b"__RAGNAVIK_SERVER_PORT__",
+)
 
 
 def fail(message: str) -> None:
@@ -78,6 +82,9 @@ def validate(args: argparse.Namespace) -> dict:
         if missing:
             fail(f"package is missing required root entries: {sorted(missing)}")
         packaged = json.loads(archive.read("manifest.json"))
+        fastlink = archive.read("config/Azumatt.FastLink_servers.yml")
+        if any(token in fastlink for token in PRIVATE_TEMPLATE_TOKENS):
+            fail("package contains unrendered private FastLink placeholders")
     if packaged != manifest:
         fail("packaged manifest does not match the source manifest")
     validate_blog(args.blog_url, not args.skip_blog_check)

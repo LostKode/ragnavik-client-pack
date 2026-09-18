@@ -1,6 +1,6 @@
 Ragnavik:
   address: __RAGNAVIK_SERVER_ADDRESS__
-  port: 2456
+  port: __RAGNAVIK_SERVER_PORT__
   iscrossplay: false
   ispvp: false
   iswhitelisted: true

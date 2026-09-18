@@ -22,7 +22,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_package.py
-      - run: python3 scripts/build_package.py
+      - name: Build release artifact with private FastLink data
+        env:
+          RAGNAVIK_SERVER_ADDRESS: ${{ secrets.RAGNAVIK_SERVER_ADDRESS }}
+          RAGNAVIK_SERVER_PORT: ${{ secrets.RAGNAVIK_SERVER_PORT }}
+        run: python3 scripts/build_package.py
       - name: Validate Hexium artifact and release gate
         run: >-
           python3 scripts/hexium_release.py validate

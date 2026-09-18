@@ -4,6 +4,13 @@ Ragnavik is currently in a private testing phase. We are testing the mod profile
 
 Public access is not open yet. We will announce when Ragnavik is ready for more players.
 
+Release artifacts render the private FastLink connection data from protected
+GitHub Actions secrets. The repository contains placeholders only.
+
+LostKode-authored material is available under the MIT license. Third-party
+packages and assets retain their respective licenses; see
+THIRD_PARTY_NOTICES.md.
+
 ## Current testers
 
 If you have already been invited to test Ragnavik:
