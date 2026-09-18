@@ -142,9 +142,21 @@
     "config/Azumatt.FastLink_servers.yml",
     "config/Azumatt.MaxPlayerCount.cfg",
     "config/Azumatt.SleepSkip.cfg",
-    "config/Intermission/tips.txt"
+    "config/CustomMainMenu/changelog.txt",
+    "config/Intermission/tips.txt",
+    "config/rdmods.custommainmenu.cfg"
   ],
   "assets": [
+    "config/CustomMainMenu/LoadingArt/art1.png",
+    "config/CustomMainMenu/LoadingArt/art2.png",
+    "config/CustomMainMenu/LoadingArt/art3.png",
+    "config/CustomMainMenu/LoadingArt/art4.png",
+    "config/CustomMainMenu/LoadingArt/art5.png",
+    "config/CustomMainMenu/LoadingArt/art6.png",
+    "config/CustomMainMenu/LoadingArt/art7.png",
+    "config/CustomMainMenu/LoadingArt/art8.png",
+    "config/CustomMainMenu/discordlogo.png",
+    "config/CustomMainMenu/logo.png",
     "config/Intermission/01-meadow-homestead.png",
     "config/Intermission/02-winter-harbor.png",
     "config/Intermission/03-storm-voyage.png",
