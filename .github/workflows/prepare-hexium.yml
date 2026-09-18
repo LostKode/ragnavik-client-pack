@@ -26,13 +26,25 @@ jobs:
           path: client
           fetch-depth: 0
       - uses: actions/checkout@v4
-        with: {repository: LostKode/ragnavik-compat, path: sources/ragnavik-compat}
+        with:
+          repository: LostKode/ragnavik-compat
+          path: sources/ragnavik-compat
+          token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
       - uses: actions/checkout@v4
-        with: {repository: LostKode/ragnavik-ui, path: sources/ragnavik-ui}
+        with:
+          repository: LostKode/ragnavik-ui
+          path: sources/ragnavik-ui
+          token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
       - uses: actions/checkout@v4
-        with: {repository: LostKode/ragnavik-server-bridge, path: sources/ragnavik-server-bridge}
+        with:
+          repository: LostKode/ragnavik-server-bridge
+          path: sources/ragnavik-server-bridge
+          token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
       - uses: actions/checkout@v4
-        with: {repository: LostKode/ragnavik-server-pack, path: sources/ragnavik-server-pack}
+        with:
+          repository: LostKode/ragnavik-server-pack
+          path: sources/ragnavik-server-pack
+          token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
       - uses: actions/checkout@v4
         with:
           repository: LostKode/ragnavik
