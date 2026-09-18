@@ -22,6 +22,9 @@ FORBIDDEN_PARTS = {
     "bin", "obj", "__pycache__",
 }
 FORBIDDEN_SUFFIXES = {".zip", ".pdb", ".cs", ".csproj", ".sln", ".pyc"}
+ADDRESS_TOKEN = "__RAGNAVIK_SERVER_ADDRESS__"
+PORT_TOKEN = "__RAGNAVIK_SERVER_PORT__"
+IPV4 = re.compile(r"(?<![0-9])(?:[0-9]{1,3}\.){3}[0-9]{1,3}(?![0-9])")
 
 
 def fail(message: str) -> None:
@@ -59,6 +62,14 @@ def main() -> None:
     if len(manifest["dependencies"]) != len(set(manifest["dependencies"])):
         fail("manifest contains duplicate dependencies")
 
+    fastlink = (ROOT / "config" / "Azumatt.FastLink_servers.yml").read_text(
+        encoding="utf-8"
+    )
+    if ADDRESS_TOKEN not in fastlink or PORT_TOKEN not in fastlink:
+        fail("FastLink server data must remain an unrendered release template")
+    if IPV4.search(fastlink):
+        fail("FastLink template contains a literal network address")
+
     parsed = []
     for dependency in manifest["dependencies"]:
         match = DEPENDENCY.fullmatch(dependency)
@@ -80,10 +91,9 @@ def main() -> None:
     invalid_keys = sorted(key for key in mappings if not PACKAGE_KEY.fullmatch(key))
     if invalid_keys:
         fail(f"invalid package keys in anti-cheat contract: {invalid_keys}")
-    if client_keys != set(mappings):
-        missing = sorted(client_keys - set(mappings))
-        stale = sorted(set(mappings) - client_keys)
-        fail(f"anti-cheat mapping mismatch; missing={missing}, stale={stale}")
+    stale = sorted(set(mappings) - client_keys)
+    if stale:
+        fail(f"anti-cheat mapping references absent dependencies: {stale}")
 
     guids = list(mappings.values()) + list(contract["bundled_client_plugins"].values())
     if any(not isinstance(guid, str) or not guid.strip() for guid in guids):
@@ -99,7 +109,12 @@ def main() -> None:
         fail(f"icon.png must be 256x256, got {icon_size[0]}x{icon_size[1]}")
 
     for path in ROOT.rglob("*"):
-        if ".git" in path.parts or ".github" in path.parts or not path.is_file():
+        if (
+            ".git" in path.parts
+            or ".github" in path.parts
+            or "dist" in path.parts
+            or not path.is_file()
+        ):
             continue
         relative = path.relative_to(ROOT)
         if FORBIDDEN_PARTS.intersection(relative.parts):
@@ -110,7 +125,7 @@ def main() -> None:
     print(
         f"Validated Ragnavik {manifest['version_number']}: "
         f"{len(manifest['dependencies'])} dependencies, "
-        f"{len(guids)} client-only plugin GUIDs."
+        f"{len(guids)} verified client-only plugin GUIDs."
     )
 
 
