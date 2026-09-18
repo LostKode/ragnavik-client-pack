@@ -64,7 +64,9 @@ jobs:
       - name: Validate Client Pack
         if: env.SKIP_RELEASE != 'true'
         working-directory: client
-        run: PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_package.py
+        run: |
+          PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_package.py
+          PYTHONDONTWRITEBYTECODE=1 python3 scripts/publish_changelog.py validate --changelog release/changelog.json
       - name: Commit coordinated source updates
         if: env.SKIP_RELEASE != 'true'
         env:
@@ -77,7 +79,7 @@ jobs:
           git -C client push origin HEAD:main
           git -C website config user.name "Ragnavik Release Bot"
           git -C website config user.email "release-bot@users.noreply.github.com"
-          git -C website add src/data/changelog.ts src/app/blog
+          git -C website add src/app/blog
           git -C website diff --cached --quiet || git -C website commit -m "docs: announce Client $EXPECTED_VERSION"
           git -C website push origin HEAD:main
       - name: Wait for public release post
@@ -117,3 +119,13 @@ jobs:
         if: env.SKIP_RELEASE != 'true'
         working-directory: client
         run: python3 scripts/hexium_publish.py verify --name Ragnavik --version "$EXPECTED_VERSION"
+      - name: Publish website changelog
+        if: env.SKIP_RELEASE != 'true'
+        working-directory: client
+        env:
+          CHANGELOG_API_KEY: ${{ secrets.CHANGELOG_API_KEY }}
+        run: >-
+          python3 scripts/publish_changelog.py publish
+          --changelog release/changelog.json
+          --endpoint https://ragnavik.vercel.app/api/changelog
+          --api-key "$CHANGELOG_API_KEY"
