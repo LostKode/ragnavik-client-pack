@@ -79,7 +79,7 @@ jobs:
           git -C client push origin HEAD:main
           git -C website config user.name "Ragnavik Release Bot"
           git -C website config user.email "release-bot@users.noreply.github.com"
-          git -C website add src/data/changelog.ts src/app/blog
+          git -C website add src/app/blog
           git -C website diff --cached --quiet || git -C website commit -m "docs: announce Client $EXPECTED_VERSION"
           git -C website push origin HEAD:main
       - name: Wait for public release post

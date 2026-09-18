@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prepare a Client release from component versions public at the cutoff."""
 import argparse,json,re,urllib.request
-from datetime import date,datetime,timezone
+from datetime import date
 from pathlib import Path
 COMPONENTS=(
  ("ragnavik-compat","Ragnavik_Compatibility","LostKode-Ragnavik_Compatibility","package/manifest.json"),
@@ -37,10 +37,6 @@ def update_client(path,version,changes):
    path.write_text("\n".join(lines)+"\n");return
  separator=next(i for i,line in enumerate(lines) if line.startswith("|-"));lines.insert(separator+1,f"| {version}  | {combined} |");path.write_text("\n".join(lines)+"\n")
 def update_site(root,version,published,changes):
- changelog=root/"src/data/changelog.ts";text=changelog.read_text();values=",\n        ".join(json.dumps(x) for x in changes)
- entry="    {\n      version: "+json.dumps(version)+",\n      publishedAt: "+json.dumps(published)+",\n      title: \"Coordinated client release\",\n      changes: [\n        "+values+",\n      ],\n    },\n"
- if f'version: "{version}"' not in text:text=text.replace("  entries: [\n","  entries: [\n"+entry,1)
- stamp=datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00","Z");text=re.sub(r'updatedAt: "[^"]+"',f'updatedAt: "{stamp}"',text,1);changelog.write_text(text)
  slug=f"ragnavik-client-{version.replace('.', '-')}";post=root/"src/app/blog"/slug/"page.mdx";post.parent.mkdir(parents=True,exist_ok=True);bullets="\n".join("- "+x for x in changes)
  post.write_text(f'''export const article = {{
   author: "Ragnavik Team",
@@ -67,5 +63,7 @@ def main():
   previous,changed=pin(manifest,key,public);versions[package]=public
   if changed:changes.append(f"Updated {package.replace('_',' ')} from {previous} to {public}. {change_for(source/'CHANGELOG.md',public)}")
  if not changes:changes.append("Published the prepared Client Pack changes with the component versions public at the cutoff.")
- path.write_text(json.dumps(manifest,indent=2)+"\n");update_client(Path("CHANGELOG.md"),version,changes);blog=update_site(args.website,version,args.date,changes);args.output.write_text(json.dumps({"client_version":version,"blog_url":blog,"component_versions":versions,"changes":changes},indent=2)+"\n")
+ path.write_text(json.dumps(manifest,indent=2)+"\n");update_client(Path("CHANGELOG.md"),version,changes);blog=update_site(args.website,version,args.date,changes)
+ changelog={"version":version,"publishedAt":args.date,"title":"Coordinated client release","changes":changes};changelog_path=Path("release/changelog.json");changelog_path.parent.mkdir(parents=True,exist_ok=True);changelog_path.write_text(json.dumps(changelog,indent=2)+"\n")
+ args.output.write_text(json.dumps({"client_version":version,"blog_url":blog,"component_versions":versions,"changes":changes},indent=2)+"\n")
 if __name__=="__main__":main()

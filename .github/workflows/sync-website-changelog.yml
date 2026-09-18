@@ -1,0 +1,25 @@
+name: Sync website changelog
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    environment: hexium-production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/publish_changelog.py validate
+      - name: Publish website changelog
+        env:
+          CHANGELOG_API_KEY: ${{ secrets.CHANGELOG_API_KEY }}
+        run: >-
+          python3 scripts/publish_changelog.py publish
+          --endpoint https://ragnavik.vercel.app/api/changelog
+          --api-key "$CHANGELOG_API_KEY"
