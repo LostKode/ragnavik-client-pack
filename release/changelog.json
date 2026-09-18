@@ -1,0 +1,11 @@
+{
+  "version": "1.1.17",
+  "publishedAt": "2026-09-18",
+  "title": "Valheim 1.0 compatibility refresh",
+  "changes": [
+    "Updated Epic Loot, FastLink, First Person Mode, Haulers Helper, Max Player Count, Ship Stats, OdinShip, and Jotunn for local compatibility testing.",
+    "Removed Marketplace temporarily because its prerelease version could not be represented safely in the pack manifest.",
+    "Restored CustomMainMenu with its incompatible intro skip disabled so the vanilla intro remains visible.",
+    "Kept the Ragnavik UI compass and clock while retiring its inventory positioning behavior."
+  ]
+}
