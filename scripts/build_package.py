@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a reproducible Thunderstore archive for the client pack."""
+"""Build a reproducible Hexium archive for the client pack."""
 
 from __future__ import annotations
 

@@ -3,6 +3,7 @@
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
 | 1.1.16  | Rebuild the complete Gale dependency set with Hexium as the primary source and Thunderstore fallback. Replace MagicRevamp with MagicPlugin 2.2.0 and the retired custom sleep components with Azumatt SleepSkip. Restore the approved client packages and preserve FastLink plus the existing loading artwork. |
+| 1.1.17  | Replace CustomMainMenu with Ragnavik UI 1.1.0. Add the separate website backed Ragnavik changelog while preserving Valheim's native changelog. |
 | 1.1.15  | Mark Ragnavik as being in private testing and replace the public access invitation with a link to the current request page. |
 | 1.1.14  | Simplify the Thunderstore Details page to explain what the pack is, how to install and use it, and how to join Ragnavik. |
 | 1.1.13  | Require Ragnavik Server 1.0.13 with seven reviewed mod updates. Disable the Vapok startup splash and anonymous telemetry. |

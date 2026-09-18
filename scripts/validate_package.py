@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Thunderstore client package and anti-cheat contract."""
+"""Validate the Hexium client package and anti-cheat contract."""
 
 from __future__ import annotations
 
@@ -42,7 +42,7 @@ def png_dimensions(path: Path) -> tuple[int, int]:
 def main() -> None:
     for relative in REQUIRED:
         if not (ROOT / relative).is_file():
-            fail(f"missing required Thunderstore file: {relative}")
+            fail(f"missing required package file: {relative}")
 
     try:
         manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
