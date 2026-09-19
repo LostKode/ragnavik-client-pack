@@ -126,10 +126,36 @@ def current(args: argparse.Namespace) -> None:
     print(current_version(args.name) or "")
 
 
+def cdn_version_exists(name: str, version: str) -> tuple[bool, str | None]:
+    url = f"https://valheim.hexium.gg/mods/LostKode/{name}"
+    request = urllib.request.Request(url, headers={"User-Agent": "Ragnavik release validation"})
+    with urllib.request.urlopen(request, timeout=30) as response:
+        page = response.read().decode("utf-8")
+    for payload in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.DOTALL):
+        metadata = json.loads(payload)
+        download = metadata.get("downloadUrl") if metadata.get("@type") == "SoftwareApplication" else None
+        if not isinstance(download, str) or "/" not in download:
+            continue
+        candidate = download.rsplit("/", 1)[0] + f"/{version}.zip"
+        try:
+            probe = urllib.request.Request(candidate, headers={"User-Agent": "Ragnavik release validation"}, method="HEAD")
+            with urllib.request.urlopen(probe, timeout=30) as response:
+                return response.status == 200, candidate
+        except urllib.error.HTTPError as error:
+            if error.code == 404:
+                return False, candidate
+            raise
+    return False, None
+
+
 def verify(args: argparse.Namespace) -> None:
     url = f"https://valheim.hexium.gg/mods/LostKode/{args.name}"
     for attempt in range(1, 13):
         try:
+            artifact_exists, artifact_url = cdn_version_exists(args.name, args.version)
+            if artifact_exists:
+                print(f"verified LostKode-{args.name}-{args.version} at {artifact_url}")
+                return
             published = current_version(args.name)
             if published == args.version:
                 print(f"verified LostKode-{args.name}-{args.version} at {url}")

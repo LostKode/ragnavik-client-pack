@@ -10,13 +10,31 @@ COMPONENTS=(
  ("ragnavik-server-pack","Ragnavik_Server","LostKode-Ragnavik_Server","manifest.json"),)
 ROW=re.compile(r"^\|\s*(\d+\.\d+\.\d+)\s*\|\s*(.*?)\s*\|\s*$")
 def fail(message): raise SystemExit(message)
-def public_version(package):
+def public_metadata(package):
  url=f"https://valheim.hexium.gg/mods/LostKode/{package}"
  with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"Ragnavik release coordinator"}),timeout=30) as response: page=response.read().decode()
  for payload in re.findall(r'<script type="application/ld\+json">(.*?)</script>',page,re.S):
   metadata=json.loads(payload)
-  if metadata.get("@type")=="SoftwareApplication" and metadata.get("softwareVersion"): return metadata["softwareVersion"]
+  if metadata.get("@type")=="SoftwareApplication" and metadata.get("softwareVersion"): return metadata
  return None
+def cdn_version_exists(metadata,version):
+ download=metadata.get("downloadUrl") if metadata else None
+ if not isinstance(download,str) or "/" not in download:return False
+ candidate=download.rsplit("/",1)[0]+f"/{version}.zip"
+ try:
+  request=urllib.request.Request(candidate,headers={"User-Agent":"Ragnavik release coordinator"},method="HEAD")
+  with urllib.request.urlopen(request,timeout=30) as response:return response.status==200
+ except urllib.error.HTTPError as error:
+  if error.code==404:return False
+  raise
+def available_version(package,main):
+ metadata=public_metadata(package)
+ if metadata is None:return None
+ public=metadata["softwareVersion"]
+ if main!=public and cdn_version_exists(metadata,main):
+  print(f"{package}: page exposes {public}; exact {main} CDN artifact returned HTTP 200")
+  return main
+ return public
 def change_for(path,version):
  for line in path.read_text().splitlines():
   match=ROW.match(line)
@@ -56,7 +74,7 @@ def main():
  ap=argparse.ArgumentParser();ap.add_argument("--sources",type=Path,required=True);ap.add_argument("--website",type=Path,required=True);ap.add_argument("--output",type=Path,required=True);ap.add_argument("--date",default=date.today().isoformat());args=ap.parse_args()
  path=Path("manifest.json");manifest=json.loads(path.read_text());version=manifest["version_number"];changes=[];versions={}
  for directory,package,key,manifest_name in COMPONENTS:
-  source=args.sources/directory;public=public_version(package);main=json.loads((source/manifest_name).read_text())["version_number"]
+  source=args.sources/directory;main=json.loads((source/manifest_name).read_text())["version_number"];public=available_version(package,main)
   if public is None:
    print(f"{package}: no public release at cutoff; ignoring {main}");continue
   if public!=main:print(f"{package}: main is {main}; using public cutoff {public}")

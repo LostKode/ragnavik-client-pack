@@ -2,7 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
-| 1.1.18  | Require Ragnavik Server 1.1.2 and Ragnavik Compatibility 1.0.1 with corrected Hexium installation classifications. |
+| 1.1.18  | Require Ragnavik Server 1.1.2, Ragnavik Compatibility 1.0.1, and Ragnavik UI 1.2.6. Keep AzuClock on the verified Hexium 1.1.1 release. |
 | 1.1.17  | Update Epic Loot, FastLink, First Person Mode, Haulers Helper, Max Player Count, Ship Stats and OdinShip, and Jotunn for local compatibility testing. Remove Marketplace for now after its prerelease could not be represented safely in the pack manifest. Restore CustomMainMenu with its incompatible intro-skip feature disabled so players still see the vanilla intro. Keep Ragnavik UI for its compass and clock behavior while retiring its inventory positioning behavior. |
 | 1.1.16  | Rebuild the complete Gale dependency set with Hexium as the primary source and Thunderstore fallback. Replace MagicRevamp with MagicPlugin 2.2.0 and the retired custom sleep components with Azumatt SleepSkip. Restore the approved client packages and preserve FastLink plus the existing loading artwork. |
 | 1.1.15  | Mark Ragnavik as being in private testing and replace the public access invitation with a link to the current request page. |
