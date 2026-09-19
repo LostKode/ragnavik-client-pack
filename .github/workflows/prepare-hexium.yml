@@ -26,26 +26,31 @@ jobs:
           path: client
           fetch-depth: 0
       - uses: actions/checkout@v4
+        if: github.event_name == 'schedule'
         with:
           repository: LostKode/ragnavik-compat
           path: sources/ragnavik-compat
           token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
       - uses: actions/checkout@v4
+        if: github.event_name == 'schedule'
         with:
           repository: LostKode/ragnavik-ui
           path: sources/ragnavik-ui
           token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
       - uses: actions/checkout@v4
+        if: github.event_name == 'schedule'
         with:
           repository: LostKode/ragnavik-server-bridge
           path: sources/ragnavik-server-bridge
           token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
       - uses: actions/checkout@v4
+        if: github.event_name == 'schedule'
         with:
           repository: LostKode/ragnavik-server-pack
           path: sources/ragnavik-server-pack
           token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
       - uses: actions/checkout@v4
+        if: github.event_name == 'schedule'
         with:
           repository: LostKode/ragnavik
           path: website
@@ -56,7 +61,9 @@ jobs:
         env:
           HEXIUM_AUTH_TOKEN: ${{ secrets.HEXIUM_AUTH_TOKEN }}
           RELEASE_AUTOMATION_TOKEN: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
-        run: test -n "$HEXIUM_AUTH_TOKEN" && test -n "$RELEASE_AUTOMATION_TOKEN"
+        run: |
+          test -n "$HEXIUM_AUTH_TOKEN"
+          if [[ "$GITHUB_EVENT_NAME" == "schedule" ]]; then test -n "$RELEASE_AUTOMATION_TOKEN"; fi
       - name: Resolve Client version and public state
         working-directory: client
         run: |
@@ -70,9 +77,12 @@ jobs:
             echo "SKIP_RELEASE=false" >> "$GITHUB_ENV"
           fi
       - name: Gather public component releases at cutoff
-        if: env.SKIP_RELEASE != 'true'
+        if: env.SKIP_RELEASE != 'true' && github.event_name == 'schedule'
         working-directory: client
         run: python3 scripts/prepare_coordinated_release.py --sources ../sources --website ../website --output release.json
+      - name: Set manual release metadata
+        if: env.SKIP_RELEASE != 'true' && github.event_name == 'workflow_dispatch'
+        run: echo "BLOG_URL=https://ragnavik.vercel.app" >> "$GITHUB_ENV"
       - name: Validate Client Pack
         if: env.SKIP_RELEASE != 'true'
         working-directory: client
@@ -80,7 +90,7 @@ jobs:
           PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_package.py
           PYTHONDONTWRITEBYTECODE=1 python3 scripts/publish_changelog.py validate --changelog release/changelog.json
       - name: Commit coordinated source updates
-        if: env.SKIP_RELEASE != 'true'
+        if: env.SKIP_RELEASE != 'true' && github.event_name == 'schedule'
         env:
           GH_TOKEN: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
         run: |
@@ -95,7 +105,7 @@ jobs:
           git -C website diff --cached --quiet || git -C website commit -m "docs: announce Client $EXPECTED_VERSION"
           git -C website push origin HEAD:main
       - name: Wait for public release post
-        if: env.SKIP_RELEASE != 'true'
+        if: env.SKIP_RELEASE != 'true' && github.event_name == 'schedule'
         working-directory: client
         run: |
           blog_url=$(python3 -c 'import json; print(json.load(open("release.json"))["blog_url"])')
