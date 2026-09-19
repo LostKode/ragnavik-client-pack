@@ -1,12 +1,10 @@
 {
-  "version": "1.1.18",
+  "version": "1.1.19",
   "publishedAt": "2026-09-19",
-  "title": "Latest Ragnavik UI and package fixes",
+  "title": "Remove replaced menu mods",
   "changes": [
-    "Required Ragnavik Server 1.1.2 with its corrected Client & Server classification.",
-    "Required Ragnavik Compatibility 1.0.1 with its corrected Client & Server classification.",
-    "Required Ragnavik UI 1.2.6 with the integrated menu, direct entry, isolated characters, and loading screen work.",
-    "Kept AzuClock on Hexium 1.1.1 because the proposed 1.1.9 artifact is unavailable.",
-    "Included Ragnavik Server Bridge 1.0.1 through the server pack with its corrected server only classification."
+    "Removed FastLink 1.4.9 and CustomMainMenu 1.3.0 from the Client Pack.",
+    "Removed their obsolete configuration, artwork, release secret rendering, and FastLink anti-cheat entry.",
+    "Ragnavik UI 1.2.6 now owns direct server entry, the main menu, and loading presentation."
   ]
 }
