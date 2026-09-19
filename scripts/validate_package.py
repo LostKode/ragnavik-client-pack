@@ -22,9 +22,6 @@ FORBIDDEN_PARTS = {
     "bin", "obj", "__pycache__",
 }
 FORBIDDEN_SUFFIXES = {".zip", ".pdb", ".cs", ".csproj", ".sln", ".pyc"}
-ADDRESS_TOKEN = "__RAGNAVIK_SERVER_ADDRESS__"
-PORT_TOKEN = "__RAGNAVIK_SERVER_PORT__"
-IPV4 = re.compile(r"(?<![0-9])(?:[0-9]{1,3}\.){3}[0-9]{1,3}(?![0-9])")
 
 
 def fail(message: str) -> None:
@@ -62,13 +59,6 @@ def main() -> None:
     if len(manifest["dependencies"]) != len(set(manifest["dependencies"])):
         fail("manifest contains duplicate dependencies")
 
-    fastlink = (ROOT / "config" / "Azumatt.FastLink_servers.yml").read_text(
-        encoding="utf-8"
-    )
-    if ADDRESS_TOKEN not in fastlink or PORT_TOKEN not in fastlink:
-        fail("FastLink server data must remain an unrendered release template")
-    if IPV4.search(fastlink):
-        fail("FastLink template contains a literal network address")
 
     parsed = []
     for dependency in manifest["dependencies"]:

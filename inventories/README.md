@@ -7,5 +7,5 @@ patchers, configurations, and assets are sorted and de-duplicated.
 
 The inventory is scoped to the client pack archive itself. Resolver-expanded
 package contents are verified separately. The eight Intermission images remain
-packaged as preserved loading artwork for the later CustomMainMenu transition.
+packaged as preserved loading artwork for the Ragnavik UI loading-screen transition.
 Intermission itself is intentionally removed from dependencies.

@@ -8,8 +8,7 @@
     "Azumatt-AzuAreaRepair": "Azumatt.AzuAreaRepair",
     "Neobotics-HUDCompass": "neobotics.valheim_mod.hudcompass",
     "ComfyMods-Chatter": "redseiko.valheim.chatter",
-    "Azumatt-Unshamed": "Azumatt.Unshamed",
-    "Azumatt-FastLink": "Azumatt.FastLink"
+    "Azumatt-Unshamed": "Azumatt.Unshamed"
   },
   "bundled_client_plugins": {},
   "server_pack_prefix": "LostKode-Ragnavik_Server-"
