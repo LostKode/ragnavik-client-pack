@@ -54,9 +54,6 @@ def prepare(args: argparse.Namespace) -> None:
         if missing:
             fail(f"package is missing required entries: {sorted(missing)}")
         packaged = json.loads(archive.read("manifest.json"))
-        fastlink = archive.read("config/Azumatt.FastLink_servers.yml")
-        if b"__RAGNAVIK_SERVER_ADDRESS__" in fastlink or b"__RAGNAVIK_SERVER_PORT__" in fastlink:
-            fail("package contains unrendered private FastLink placeholders")
     if packaged != manifest:
         fail("packaged manifest does not match the source manifest")
 

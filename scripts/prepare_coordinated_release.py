@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Prepare a Client release from component versions public at the cutoff."""
-import argparse,json,re,urllib.request
+import argparse,io,json,re,urllib.error,urllib.request,zipfile
 from datetime import date
 from pathlib import Path
 COMPONENTS=(
@@ -40,6 +40,32 @@ def change_for(path,version):
   match=ROW.match(line)
   if match and match.group(1)==version:return re.sub(r"<br\s*/?>"," ",match.group(2)).strip()
  fail(f"{path} has no row for public version {version}")
+def optional_change_for(path,version):
+ try:return change_for(path,version)
+ except SystemExit:return None
+def dependency_map(manifest):
+ result={}
+ for dependency in manifest.get("dependencies",[]):
+  match=re.match(r"^(.*)-(\d+\.\d+\.\d+)$",dependency)
+  if match:result[match.group(1)]=match.group(2)
+ return result
+def previous_client_manifest():
+ metadata=public_metadata("Ragnavik")
+ download=metadata.get("downloadUrl") if metadata else None
+ if not isinstance(download,str):return None
+ request=urllib.request.Request(download,headers={"User-Agent":"Ragnavik release coordinator"})
+ with urllib.request.urlopen(request,timeout=60) as response,zipfile.ZipFile(io.BytesIO(response.read())) as archive:
+  return json.loads(archive.read("manifest.json"))
+def dependency_changes(before,after,component_keys):
+ if before is None:return []
+ old=dependency_map(before);new=dependency_map(after);changes=[]
+ for key in sorted(set(old)|set(new)):
+  if key in component_keys:continue
+  name=key.split("-",1)[-1].replace("_"," ")
+  if key not in old:changes.append(f"Added {name} {new[key]}.")
+  elif key not in new:changes.append(f"Removed {name} {old[key]}.")
+  elif old[key]!=new[key]:changes.append(f"Updated {name} from {old[key]} to {new[key]}.")
+ return changes
 def pin(manifest,key,version):
  prefix=key+"-"
  for index,value in enumerate(manifest["dependencies"]):
@@ -72,7 +98,7 @@ Review the [current Known Issues page](/known-issues) before updating.
  return f"https://ragnavik.vercel.app/blog/{slug}"
 def main():
  ap=argparse.ArgumentParser();ap.add_argument("--sources",type=Path,required=True);ap.add_argument("--website",type=Path,required=True);ap.add_argument("--output",type=Path,required=True);ap.add_argument("--date",default=date.today().isoformat());args=ap.parse_args()
- path=Path("manifest.json");manifest=json.loads(path.read_text());version=manifest["version_number"];changes=[];versions={}
+ path=Path("manifest.json");manifest=json.loads(path.read_text());version=manifest["version_number"];previous_manifest=previous_client_manifest();client_change=optional_change_for(Path("CHANGELOG.md"),version);changes=[client_change] if client_change else [];versions={};component_keys={item[2] for item in COMPONENTS}
  for directory,package,key,manifest_name in COMPONENTS:
   source=args.sources/directory;main=json.loads((source/manifest_name).read_text())["version_number"];public=available_version(package,main)
   if public is None:
@@ -80,6 +106,7 @@ def main():
   if public!=main:print(f"{package}: main is {main}; using public cutoff {public}")
   previous,changed=pin(manifest,key,public);versions[package]=public
   if changed:changes.append(f"Updated {package.replace('_',' ')} from {previous} to {public}. {change_for(source/'CHANGELOG.md',public)}")
+ changes.extend(dependency_changes(previous_manifest,manifest,component_keys))
  if not changes:changes.append("Published the prepared Client Pack changes with the component versions public at the cutoff.")
  path.write_text(json.dumps(manifest,indent=2)+"\n");update_client(Path("CHANGELOG.md"),version,changes);blog=update_site(args.website,version,args.date,changes)
  changelog={"version":version,"publishedAt":args.date,"title":"Coordinated client release","changes":changes};changelog_path=Path("release/changelog.json");changelog_path.parent.mkdir(parents=True,exist_ok=True);changelog_path.write_text(json.dumps(changelog,indent=2)+"\n")
