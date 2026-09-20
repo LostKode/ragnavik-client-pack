@@ -1,10 +1,10 @@
 {
-  "version": "1.1.27",
+  "version": "1.1.28",
   "publishedAt": "2026-09-20",
-  "title": "Progression-gated ore mines",
+  "title": "Shared dependency alignment",
   "changes": [
-    "Added OreMines 1.2.1 to the client and server packs.",
-    "The fresh Ragnavik world can generate biome-specific mining dungeons tied to boss progression.",
-    "Retained the approved 30-day World Advancement Progression boss schedule."
+    "Aligned BoardersBumperBlurbs and GhostBuild to 1.0.4.",
+    "Aligned HildirsQuest, SmartSkills, and StartupAccelerator to 1.0.4.",
+    "Kept the complete client and server shared mod set on exact matching versions."
   ]
 }
