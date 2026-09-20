@@ -1,11 +1,11 @@
 {
   "name": "Ragnavik",
-  "version_number": "1.1.21",
+  "version_number": "1.1.22",
   "website_url": "https://ragnavik.vercel.app",
   "description": "Ragnavik is currently in private testing. Public access is not open yet.",
   "dependencies": [
     "LostKode-Ragnavik_Server-1.1.3",
-    "LostKode-Ragnavik_UI-1.2.7",
+    "LostKode-Ragnavik_UI-1.2.8",
     "LostKode-Ragnavik_Compatibility-1.0.1",
     "denikson-BepInExPack_Valheim-5.4.2350",
     "Advize-PlantEasily-2.2.0",
