@@ -144,6 +144,7 @@
     "config/Azumatt.SleepSkip.cfg",
     "config/Intermission/tips.txt",
     "config/org.bepinex.plugins.farming.cfg",
+    "config/org.bepinex.plugins.professions.cfg",
     "config/randyknapp.mods.epicloot.cfg"
   ],
   "assets": [

@@ -1,12 +1,10 @@
 {
-  "version": "1.1.31",
+  "version": "1.1.32",
   "publishedAt": "2026-09-20",
-  "title": "Shared content maintenance",
+  "title": "Two professions per player",
   "changes": [
-    "Updated CookingAdditions, FloraCollector, and MagicPlugin with their latest audio fixes.",
-    "Updated Ragnavik UI so connection guidance no longer overlaps its action button.",
-    "Configured Farming profession progression without duplicating PlantEasily automation or PlantEverything crop guidance.",
-    "Updated OdinsFoodBarrels with corrected Russian localization.",
-    "Retained FineWoodPieces 1.6.6 because it is already current on Hexium."
+    "Players can now pursue two professions at the same time.",
+    "Profession changes are available once every 24 hours and reset the profession being abandoned.",
+    "The profession panel now uses F9 so it no longer conflicts with TargetPortal's P shortcut."
   ]
 }
