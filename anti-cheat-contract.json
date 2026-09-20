@@ -10,6 +10,5 @@
     "ComfyMods-Chatter": "redseiko.valheim.chatter",
     "Azumatt-Unshamed": "Azumatt.Unshamed"
   },
-  "bundled_client_plugins": {},
-  "server_pack_prefix": "LostKode-Ragnavik_Server-"
+  "bundled_client_plugins": {}
 }

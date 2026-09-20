@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.24  | Remove the server-only Ragnavik Server dependency from the Client Pack so Server Bridge and other server-only package contents are not installed on players. |
 | 1.1.23  | Require Ragnavik Server 1.1.4 with Server Bridge 1.0.2 notification routing and Ragnavik UI 1.2.9 with clearer connection failure handling. |
 | 1.1.22  | Require Ragnavik UI 1.2.8 with player-facing store details and release history kept in its standalone changelog. |
 | 1.1.21  | Require Ragnavik UI 1.2.7 to restore isolated character selection, preserve player names, and recover interrupted Ragnavik character registrations. |

@@ -67,15 +67,9 @@ def main() -> None:
             fail(f"dependency is not parseable: {dependency}")
         parsed.append(match.groupdict())
 
-    server_prefix = contract["server_pack_prefix"]
-    server_packs = [dep for dep in manifest["dependencies"] if dep.startswith(server_prefix)]
-    if len(server_packs) != 1:
-        fail(f"expected exactly one {server_prefix} dependency")
-
     client_keys = {
         f"{item['namespace']}-{item['name']}"
-        for dep, item in zip(manifest["dependencies"], parsed)
-        if not dep.startswith(server_prefix)
+        for item in parsed
     }
     mappings = contract["client_only_dependencies"]
     invalid_keys = sorted(key for key in mappings if not PACKAGE_KEY.fullmatch(key))
