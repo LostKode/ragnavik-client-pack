@@ -5,6 +5,7 @@
   "changes": [
     "Updated CookingAdditions, FloraCollector, and MagicPlugin with their latest audio fixes.",
     "Updated Ragnavik UI so connection guidance no longer overlaps its action button.",
+    "Configured Farming profession progression without duplicating PlantEasily automation or PlantEverything crop guidance.",
     "Updated OdinsFoodBarrels with corrected Russian localization.",
     "Retained FineWoodPieces 1.6.6 because it is already current on Hexium."
   ]

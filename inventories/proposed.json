@@ -143,6 +143,7 @@
     "config/Azumatt.MaxPlayerCount.cfg",
     "config/Azumatt.SleepSkip.cfg",
     "config/Intermission/tips.txt",
+    "config/org.bepinex.plugins.farming.cfg",
     "config/randyknapp.mods.epicloot.cfg"
   ],
   "assets": [
