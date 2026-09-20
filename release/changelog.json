@@ -1,10 +1,10 @@
 {
-  "version": "1.1.26",
+  "version": "1.1.27",
   "publishedAt": "2026-09-20",
-  "title": "Per-player world progression",
+  "title": "Progression-gated ore mines",
   "changes": [
-    "Added World Advancement Progression 1.0.0 to the client and server packs.",
-    "Progression credit is tracked per player and shared only with nearby participants.",
-    "Retained Afterdeath 1.0.9 because it is already the latest Hexium release."
+    "Added OreMines 1.2.1 to the client and server packs.",
+    "The fresh Ragnavik world can generate biome-specific mining dungeons tied to boss progression.",
+    "Retained the approved 30-day World Advancement Progression boss schedule."
   ]
 }
