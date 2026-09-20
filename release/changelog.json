@@ -1,10 +1,9 @@
 {
-  "version": "1.1.28",
+  "version": "1.1.29",
   "publishedAt": "2026-09-20",
-  "title": "Shared dependency alignment",
+  "title": "Recovery configuration synchronization",
   "changes": [
-    "Aligned BoardersBumperBlurbs and GhostBuild to 1.0.4.",
-    "Aligned HildirsQuest, SmartSkills, and StartupAccelerator to 1.0.4.",
-    "Kept the complete client and server shared mod set on exact matching versions."
+    "Updated Afterdeath to 1.0.10.",
+    "Restored Epic Loot startup configuration so its welcome and core-config prompts remain disabled."
   ]
 }
