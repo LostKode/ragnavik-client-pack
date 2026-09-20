@@ -1,13 +1,8 @@
 {
-  "version": "1.1.20",
+  "version": "1.1.21",
   "publishedAt": "2026-09-19",
-  "title": "Mod compatibility and maintenance updates",
+  "title": "Character selection reliability",
   "changes": [
-    "Updated Epic Loot to 0.14.10 for enchantment, trader, bounty, treasure map, and magic effect persistence fixes.",
-    "Updated BoardersBumperBlurbs to 1.0.3.",
-    "Updated BottledNeck, HedgeWalls, OdinBear, OdinCampsite, OdinHorse, OdinsFoodBarrels, OdinsHorsePen, OdinsKingdom, OdinsTraps, OdinsUndercroft, and PotionPlus to their latest maintenance releases.",
-    "Updated Ranching to 1.1.8 with its level 50 offspring behavior and soft dependency change.",
-    "Updated WackyEpicMMOSystem to 1.9.68 with its localization update.",
-    "Updated Zen ModLib to 1.14.7 with its Valheim 1.0.15 compatibility and accumulated fixes."
+    "Updated Ragnavik UI to 1.2.7 to restore isolated character selection, preserve player names, and recover interrupted Ragnavik character registrations."
   ]
 }
