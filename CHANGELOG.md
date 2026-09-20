@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.23  | Require Ragnavik Server 1.1.4 with Server Bridge 1.0.2 notification routing and Ragnavik UI 1.2.9 with clearer connection failure handling. |
 | 1.1.22  | Require Ragnavik UI 1.2.8 with player-facing store details and release history kept in its standalone changelog. |
 | 1.1.21  | Require Ragnavik UI 1.2.7 to restore isolated character selection, preserve player names, and recover interrupted Ragnavik character registrations. |
 | 1.1.20  | Update 16 dependencies: Epic Loot 0.14.10, BoardersBumperBlurbs 1.0.3, BottledNeck 0.3.3, HedgeWalls 1.0.16, OdinBear 1.4.9, OdinCampsite 1.6.5, OdinHorse 1.7.2, OdinsFoodBarrels 1.2.8, OdinsHorsePen 1.1.2, OdinsKingdom 1.6.0, OdinsTraps 1.1.23, OdinsUndercroft 1.3.5, PotionPlus 4.3.4, Ranching 1.1.8, WackyEpicMMOSystem 1.9.68, and Zen ModLib 1.14.7. |
