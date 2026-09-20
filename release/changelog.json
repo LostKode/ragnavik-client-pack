@@ -1,9 +1,10 @@
 {
-  "version": "1.1.24",
+  "version": "1.1.25",
   "publishedAt": "2026-09-20",
-  "title": "Client package correction",
+  "title": "Blacksmithing and ranching updates",
   "changes": [
-    "Removed the server-only Ragnavik Server dependency so Server Bridge and other server-only package contents are not installed on players.",
-    "Retained Ragnavik UI 1.2.9 and Ragnavik Compatibility 1.0.1 for clients."
+    "Updated Smoothbrain Blacksmithing to 1.3.6.",
+    "Updated Smoothbrain Ranching to 1.1.9 and MoreGatesExtended to 1.0.5.",
+    "Declared the shared OdinMounts, The Fisher, and MoreGatesExtended packages directly without installing the server-only Server Pack or Server Bridge."
   ]
 }
