@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.20  | Update 16 dependencies: Epic Loot 0.14.10, BoardersBumperBlurbs 1.0.3, BottledNeck 0.3.3, HedgeWalls 1.0.16, OdinBear 1.4.9, OdinCampsite 1.6.5, OdinHorse 1.7.2, OdinsFoodBarrels 1.2.8, OdinsHorsePen 1.1.2, OdinsKingdom 1.6.0, OdinsTraps 1.1.23, OdinsUndercroft 1.3.5, PotionPlus 4.3.4, Ranching 1.1.8, WackyEpicMMOSystem 1.9.68, and Zen ModLib 1.14.7. |
 | 1.1.19  | Remove FastLink and CustomMainMenu now that Ragnavik UI owns direct server entry, the main menu, and loading presentation. Remove their obsolete configuration, artwork, release secret rendering, and FastLink anti-cheat entry from the Client Pack. |
 | 1.1.18  | Require Ragnavik Server 1.1.2, Ragnavik Compatibility 1.0.1, and Ragnavik UI 1.2.6. Keep AzuClock on the verified Hexium 1.1.1 release. |
 | 1.1.17  | Update Epic Loot, FastLink, First Person Mode, Haulers Helper, Max Player Count, Ship Stats and OdinShip, and Jotunn for local compatibility testing. Remove Marketplace for now after its prerelease could not be represented safely in the pack manifest. Restore CustomMainMenu with its incompatible intro-skip feature disabled so players still see the vanilla intro. Keep Ragnavik UI for its compass and clock behavior while retiring its inventory positioning behavior. |
