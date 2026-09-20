@@ -1,8 +1,8 @@
 {
-  "version": "1.1.21",
+  "version": "1.1.22",
   "publishedAt": "2026-09-19",
-  "title": "Character selection reliability",
+  "title": "Player-facing UI details",
   "changes": [
-    "Updated Ragnavik UI to 1.2.7 to restore isolated character selection, preserve player names, and recover interrupted Ragnavik character registrations."
+    "Updated Ragnavik UI to 1.2.8 with player-facing store details and release history kept in its standalone changelog."
   ]
 }
