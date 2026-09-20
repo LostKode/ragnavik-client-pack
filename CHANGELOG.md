@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.30  | Correct BoardersBumperBlurbs, GhostBuild, HildirsQuest, and SmartSkills to their available Hexium 1.0.3 releases so Gale installs the complete required shared mod set. |
 | 1.1.29  | Update Afterdeath to 1.0.10 and restore the packaged Epic Loot startup configuration so its welcome and core-config prompts remain disabled. |
 | 1.1.28  | Align five shared dependencies with the server: BoardersBumperBlurbs 1.0.4, GhostBuild 1.0.4, HildirsQuest 1.0.4, SmartSkills 1.0.4, and StartupAccelerator 1.0.4. |
 | 1.1.27  | Add OreMines 1.2.1 as a shared client and server dependency so the fresh Ragnavik world includes progression-gated mining dungeons across its biomes. |
