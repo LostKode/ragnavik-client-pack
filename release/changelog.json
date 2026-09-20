@@ -1,11 +1,10 @@
 {
-  "version": "1.1.32",
+  "version": "1.1.33",
   "publishedAt": "2026-09-20",
-  "title": "Two professions per player",
+  "title": "Current gameplay tips",
   "changes": [
-    "Players can now pursue two professions at the same time.",
-    "Profession changes are available once every 24 hours and reset the profession being abandoned.",
-    "The profession panel now uses F9 so it no longer conflicts with TargetPortal's P shortcut.",
-    "Resolved confirmed hotkey conflicts affecting boss powers, digging, the compass, Seidr chests, building, comfort visibility, loot pickup, and farming controls."
+    "Replaced outdated loading tips with guidance for the current installed mods.",
+    "Removed tips for retired and replaced mods.",
+    "Added current profession, hotkey, progression, building, storage, travel, combat, companion, and food guidance."
   ]
 }
