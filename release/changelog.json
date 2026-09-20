@@ -1,9 +1,10 @@
 {
-  "version": "1.1.30",
+  "version": "1.1.31",
   "publishedAt": "2026-09-20",
-  "title": "Complete shared mod installation",
+  "title": "Shared content maintenance",
   "changes": [
-    "Corrected four dependency pins to their available Hexium 1.0.3 releases.",
-    "Restored Gale installation of BoardersBumperBlurbs, GhostBuild, HildirsQuest, and SmartSkills."
+    "Updated CookingAdditions, FloraCollector, and MagicPlugin with their latest audio fixes.",
+    "Updated OdinsFoodBarrels with corrected Russian localization.",
+    "Retained FineWoodPieces 1.6.6 because it is already current on Hexium."
   ]
 }
