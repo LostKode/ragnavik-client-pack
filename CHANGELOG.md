@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.31  | Update CookingAdditions to 1.3.3, FloraCollector to 1.1.4, MagicPlugin to 2.2.1, and OdinsFoodBarrels to 1.2.9. Retain FineWoodPieces 1.6.6 because it is already the latest Hexium release. Update Ragnavik UI to 1.2.10 so connection guidance no longer overlaps its action button. Configure Farming to retain profession progression while PlantEasily owns planting grids and bulk harvesting, and PlantEverything owns growth display and biome restrictions. |
 | 1.1.30  | Correct BoardersBumperBlurbs, GhostBuild, HildirsQuest, and SmartSkills to their available Hexium 1.0.3 releases so Gale installs the complete required shared mod set. |
 | 1.1.29  | Update Afterdeath to 1.0.10 and restore the packaged Epic Loot startup configuration so its welcome and core-config prompts remain disabled. |
 | 1.1.28  | Align five shared dependencies with the server: BoardersBumperBlurbs 1.0.4, GhostBuild 1.0.4, HildirsQuest 1.0.4, SmartSkills 1.0.4, and StartupAccelerator 1.0.4. |
