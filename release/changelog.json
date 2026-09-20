@@ -1,10 +1,13 @@
 {
-  "version": "1.1.19",
+  "version": "1.1.20",
   "publishedAt": "2026-09-19",
-  "title": "Remove replaced menu mods",
+  "title": "Mod compatibility and maintenance updates",
   "changes": [
-    "Removed FastLink 1.4.9 and CustomMainMenu 1.3.0 from the Client Pack.",
-    "Removed their obsolete configuration, artwork, release secret rendering, and FastLink anti-cheat entry.",
-    "Ragnavik UI 1.2.6 now owns direct server entry, the main menu, and loading presentation."
+    "Updated Epic Loot to 0.14.10 for enchantment, trader, bounty, treasure map, and magic effect persistence fixes.",
+    "Updated BoardersBumperBlurbs to 1.0.3.",
+    "Updated BottledNeck, HedgeWalls, OdinBear, OdinCampsite, OdinHorse, OdinsFoodBarrels, OdinsHorsePen, OdinsKingdom, OdinsTraps, OdinsUndercroft, and PotionPlus to their latest maintenance releases.",
+    "Updated Ranching to 1.1.8 with its level 50 offspring behavior and soft dependency change.",
+    "Updated WackyEpicMMOSystem to 1.9.68 with its localization update.",
+    "Updated Zen ModLib to 1.14.7 with its Valheim 1.0.15 compatibility and accumulated fixes."
   ]
 }
