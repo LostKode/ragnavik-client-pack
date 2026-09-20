@@ -1,9 +1,9 @@
 {
-  "version": "1.1.29",
+  "version": "1.1.30",
   "publishedAt": "2026-09-20",
-  "title": "Recovery configuration synchronization",
+  "title": "Complete shared mod installation",
   "changes": [
-    "Updated Afterdeath to 1.0.10.",
-    "Restored Epic Loot startup configuration so its welcome and core-config prompts remain disabled."
+    "Corrected four dependency pins to their available Hexium 1.0.3 releases.",
+    "Restored Gale installation of BoardersBumperBlurbs, GhostBuild, HildirsQuest, and SmartSkills."
   ]
 }
