@@ -1,8 +1,9 @@
 {
-  "version": "1.1.22",
-  "publishedAt": "2026-09-19",
-  "title": "Player-facing UI details",
+  "version": "1.1.23",
+  "publishedAt": "2026-09-20",
+  "title": "Server and connection reliability",
   "changes": [
-    "Updated Ragnavik UI to 1.2.8 with player-facing store details and release history kept in its standalone changelog."
+    "Updated Ragnavik Server to 1.1.4, including Server Bridge 1.0.2 for bot-based anti-cheat notifications.",
+    "Updated Ragnavik UI to 1.2.9 with clearer messages for game version, mod version, and connection failures."
   ]
 }
