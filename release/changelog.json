@@ -1,9 +1,9 @@
 {
-  "version": "1.1.23",
+  "version": "1.1.24",
   "publishedAt": "2026-09-20",
-  "title": "Server and connection reliability",
+  "title": "Client package correction",
   "changes": [
-    "Updated Ragnavik Server to 1.1.4, including Server Bridge 1.0.2 for bot-based anti-cheat notifications.",
-    "Updated Ragnavik UI to 1.2.9 with clearer messages for game version, mod version, and connection failures."
+    "Removed the server-only Ragnavik Server dependency so Server Bridge and other server-only package contents are not installed on players.",
+    "Retained Ragnavik UI 1.2.9 and Ragnavik Compatibility 1.0.1 for clients."
   ]
 }
