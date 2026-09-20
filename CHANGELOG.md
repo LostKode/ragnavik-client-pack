@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.29  | Update Afterdeath to 1.0.10 and restore the packaged Epic Loot startup configuration so its welcome and core-config prompts remain disabled. |
 | 1.1.28  | Align five shared dependencies with the server: BoardersBumperBlurbs 1.0.4, GhostBuild 1.0.4, HildirsQuest 1.0.4, SmartSkills 1.0.4, and StartupAccelerator 1.0.4. |
 | 1.1.27  | Add OreMines 1.2.1 as a shared client and server dependency so the fresh Ragnavik world includes progression-gated mining dungeons across its biomes. |
 | 1.1.26  | Add World Advancement Progression 1.0.0 for per-player progression, nearby participant credit, day-gated boss altars, private raids, and area-host-based spawn progression. Retain Afterdeath 1.0.9 because it is already current. |
