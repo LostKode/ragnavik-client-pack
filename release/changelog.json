@@ -1,10 +1,10 @@
 {
-  "version": "1.1.25",
+  "version": "1.1.26",
   "publishedAt": "2026-09-20",
-  "title": "Blacksmithing and ranching updates",
+  "title": "Per-player world progression",
   "changes": [
-    "Updated Smoothbrain Blacksmithing to 1.3.6.",
-    "Updated Smoothbrain Ranching to 1.1.9 and MoreGatesExtended to 1.0.5.",
-    "Declared the shared OdinMounts, The Fisher, and MoreGatesExtended packages directly without installing the server-only Server Pack or Server Bridge."
+    "Added World Advancement Progression 1.0.0 to the client and server packs.",
+    "Progression credit is tracked per player and shared only with nearby participants.",
+    "Retained Afterdeath 1.0.9 because it is already the latest Hexium release."
   ]
 }

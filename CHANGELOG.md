@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.26  | Add World Advancement Progression 1.0.0 for per-player progression, nearby participant credit, day-gated boss altars, private raids, and area-host-based spawn progression. Retain Afterdeath 1.0.9 because it is already current. |
 | 1.1.25  | Update Smoothbrain Blacksmithing to 1.3.6, Ranching to 1.1.9, and MoreGatesExtended to 1.0.5. Declare the shared OdinMounts, The Fisher, and MoreGatesExtended packages directly now that the Client Pack no longer depends on the server-only Server Pack. |
 | 1.1.24  | Remove the server-only Ragnavik Server dependency from the Client Pack so Server Bridge and other server-only package contents are not installed on players. |
 | 1.1.23  | Require Ragnavik Server 1.1.4 with Server Bridge 1.0.2 notification routing and Ragnavik UI 1.2.9 with clearer connection failure handling. |
