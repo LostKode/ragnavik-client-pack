@@ -140,12 +140,19 @@
   ],
   "patchers": [],
   "configs": [
+    "config/Azumatt.HearthBelow.cfg",
     "config/Azumatt.MaxPlayerCount.cfg",
     "config/Azumatt.SleepSkip.cfg",
+    "config/Azumatt_and_ValheimPlusDevs.PerfectPlacement.cfg",
     "config/Intermission/tips.txt",
+    "config/blacks7ar.LootParticlePlus.cfg",
+    "config/neobotics.valheim_mod.hudcompass.cfg",
+    "config/neobotics.valheim_mod.seidrchest.cfg",
     "config/org.bepinex.plugins.farming.cfg",
+    "config/org.bepinex.plugins.passivepowers.cfg",
     "config/org.bepinex.plugins.professions.cfg",
-    "config/randyknapp.mods.epicloot.cfg"
+    "config/randyknapp.mods.epicloot.cfg",
+    "config/xyz.alcan.comfortcalc.cfg"
   ],
   "assets": [
     "config/Intermission/01-meadow-homestead.png",

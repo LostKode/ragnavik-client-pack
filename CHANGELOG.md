@@ -2,7 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
-| 1.1.32  | Allow each player to pursue two professions. Permit profession changes once every 24 hours, reset an abandoned profession's level, and move the profession panel from P to F9 to avoid the TargetPortal map hotkey. |
+| 1.1.32  | Allow each player to pursue two professions. Permit profession changes once every 24 hours and reset an abandoned profession's level. Resolve confirmed hotkey conflicts across Professions, Passive Powers, HearthBelow, HUDCompass, SeidrChest, PerfectPlacement, ComfortTweaks, LootParticlePlus, and Farming. |
 | 1.1.31  | Update CookingAdditions to 1.3.3, FloraCollector to 1.1.4, MagicPlugin to 2.2.1, and OdinsFoodBarrels to 1.2.9. Retain FineWoodPieces 1.6.6 because it is already the latest Hexium release. Update Ragnavik UI to 1.2.10 so connection guidance no longer overlaps its action button. Configure Farming to retain profession progression while PlantEasily owns planting grids and bulk harvesting, and PlantEverything owns growth display and biome restrictions. |
 | 1.1.30  | Correct BoardersBumperBlurbs, GhostBuild, HildirsQuest, and SmartSkills to their available Hexium 1.0.3 releases so Gale installs the complete required shared mod set. |
 | 1.1.29  | Update Afterdeath to 1.0.10 and restore the packaged Epic Loot startup configuration so its welcome and core-config prompts remain disabled. |
