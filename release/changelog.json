@@ -1,9 +1,9 @@
 {
-  "version": "1.1.39",
+  "version": "1.1.40",
   "publishedAt": "2026-09-21",
-  "title": "Improve spirit corpse recovery",
+  "title": "Add personalized starter supplies",
   "changes": [
-    "Require Ragnavik Shared 1.0.5 and Ragnavik Compatibility 1.0.7.",
-    "Allow Afterdeath wisps to cross dungeon transitions and use existing portals while returning to their tombstone."
+    "Require Ragnavik Shared 1.0.6.",
+    "Add Ragnavik Gameplay 1.0.0 with one personalized starter-supply claim per player at the StartTemple."
   ]
 }
