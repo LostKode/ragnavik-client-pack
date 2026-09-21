@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.39  | Require Ragnavik Shared 1.0.5 with Ragnavik Compatibility 1.0.7 so Afterdeath wisps can cross dungeon transitions and use existing portals during corpse recovery. |
 | 1.1.38  | Require Ragnavik Shared 1.0.4, which removes GhostBuild and HearthBelow after isolated testing confirmed client frame-rate and terrain-rendering regressions. |
 | 1.1.37  | Require Ragnavik Shared 1.0.3, which removes DedicatedServer 1.0.3 to restore normal simulation ownership and reduce performance issues. |
 | 1.1.36  | Require Ragnavik Shared 1.0.2 so Gale installs Ragnavik Compatibility 1.0.6 with the current MagicPlugin and EpicMMO compatibility fixes. |

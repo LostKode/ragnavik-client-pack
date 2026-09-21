@@ -1,9 +1,9 @@
 {
-  "version": "1.1.38",
+  "version": "1.1.39",
   "publishedAt": "2026-09-21",
-  "title": "Improve client performance and terrain rendering",
+  "title": "Improve spirit corpse recovery",
   "changes": [
-    "Require Ragnavik Shared 1.0.4.",
-    "Remove GhostBuild and HearthBelow after testing confirmed frame-rate and terrain-rendering regressions."
+    "Require Ragnavik Shared 1.0.5 and Ragnavik Compatibility 1.0.7.",
+    "Allow Afterdeath wisps to cross dungeon transitions and use existing portals while returning to their tombstone."
   ]
 }
