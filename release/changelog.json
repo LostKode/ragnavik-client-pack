@@ -1,11 +1,9 @@
 {
-  "version": "1.1.35",
+  "version": "1.1.36",
   "publishedAt": "2026-09-21",
-  "title": "Split client, shared, and server dependencies",
+  "title": "Update Ragnavik Compatibility",
   "changes": [
-    "Install shared gameplay dependencies through Ragnavik Shared.",
-    "Keep client-only interface and convenience mods in the Client Pack.",
-    "Stop installing Network and Server Bridge on player clients.",
-    "Test DedicatedServer 1.0.3 through the Shared Pack with matching client and server versions."
+    "Require Ragnavik Shared 1.0.2.",
+    "Install Ragnavik Compatibility 1.0.6 for the current MagicPlugin and EpicMMO fixes."
   ]
 }
