@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.37  | Require Ragnavik Shared 1.0.3, which removes DedicatedServer 1.0.3 to restore normal simulation ownership and reduce performance issues. |
 | 1.1.36  | Require Ragnavik Shared 1.0.2 so Gale installs Ragnavik Compatibility 1.0.6 with the current MagicPlugin and EpicMMO compatibility fixes. |
 | 1.1.35  | Depend on Ragnavik Shared for client-and-server gameplay mods, including a controlled DedicatedServer 1.0.3 simulation test. Keep client-only interface and convenience mods here, and stop installing server-only Network and Server Bridge code on players. |
 | 1.1.34  | Move all loading tips into Ragnavik UI as their sole owner and require Ragnavik UI 1.2.13. Update Ragnavik Compatibility to 1.0.3, Odin's Kingdom to 1.6.1, and Zen ModLib to 1.14.8. Retain FineWoodPieces 1.6.6 until its newer release is available on Hexium. |
