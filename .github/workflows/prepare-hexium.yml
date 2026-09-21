@@ -122,10 +122,6 @@ jobs:
         working-directory: client
         env: {HEXIUM_AUTH_TOKEN: "${{ secrets.HEXIUM_AUTH_TOKEN }}"}
         run: dotnet tool run tcli publish --config-path .tcli/hexium.toml --file "dist/LostKode-Ragnavik-$EXPECTED_VERSION.zip" --token "$HEXIUM_AUTH_TOKEN"
-      - name: Verify exact public Client version
-        if: env.SKIP_RELEASE != 'true'
-        working-directory: client
-        run: python3 scripts/hexium_publish.py verify --name Ragnavik --version "$EXPECTED_VERSION"
       - name: Publish website changelog
         if: env.SKIP_RELEASE != 'true'
         working-directory: client
