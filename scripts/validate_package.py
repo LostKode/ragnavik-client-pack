@@ -59,6 +59,10 @@ def main() -> None:
     if len(manifest["dependencies"]) != len(set(manifest["dependencies"])):
         fail("manifest contains duplicate dependencies")
 
+    client_tips = ROOT / "config/Intermission/tips.txt"
+    if client_tips.exists():
+        fail("loading tips belong only in the Ragnavik UI package")
+
 
     parsed = []
     for dependency in manifest["dependencies"]:
