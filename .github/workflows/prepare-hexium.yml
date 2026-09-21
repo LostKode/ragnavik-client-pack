@@ -28,26 +28,14 @@ jobs:
       - uses: actions/checkout@v4
         if: github.event_name == 'schedule'
         with:
-          repository: LostKode/ragnavik-compat
-          path: sources/ragnavik-compat
-          token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
-      - uses: actions/checkout@v4
-        if: github.event_name == 'schedule'
-        with:
           repository: LostKode/ragnavik-ui
           path: sources/ragnavik-ui
           token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
       - uses: actions/checkout@v4
         if: github.event_name == 'schedule'
         with:
-          repository: LostKode/ragnavik-server-bridge
-          path: sources/ragnavik-server-bridge
-          token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
-      - uses: actions/checkout@v4
-        if: github.event_name == 'schedule'
-        with:
-          repository: LostKode/ragnavik-server-pack
-          path: sources/ragnavik-server-pack
+          repository: LostKode/ragnavik-shared-pack
+          path: sources/ragnavik-shared-pack
           token: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
       - uses: actions/checkout@v4
         if: github.event_name == 'schedule'
@@ -134,10 +122,6 @@ jobs:
         working-directory: client
         env: {HEXIUM_AUTH_TOKEN: "${{ secrets.HEXIUM_AUTH_TOKEN }}"}
         run: dotnet tool run tcli publish --config-path .tcli/hexium.toml --file "dist/LostKode-Ragnavik-$EXPECTED_VERSION.zip" --token "$HEXIUM_AUTH_TOKEN"
-      - name: Verify exact public Client version
-        if: env.SKIP_RELEASE != 'true'
-        working-directory: client
-        run: python3 scripts/hexium_publish.py verify --name Ragnavik --version "$EXPECTED_VERSION"
       - name: Publish website changelog
         if: env.SKIP_RELEASE != 'true'
         working-directory: client

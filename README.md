@@ -4,6 +4,13 @@ Ragnavik is currently in a private testing phase. We are testing the mod profile
 
 Public access is not open yet. We will announce when Ragnavik is ready for more players.
 
+## Package role
+
+This is the player-facing Client Pack. It installs Ragnavik Shared for gameplay
+mods that must run on both sides, then adds only client interface and convenience
+mods. Dedicated-server code, including Network and Ragnavik Server Bridge, is
+owned by the Server Pack and is not installed on players.
+
 LostKode-authored material is available under the MIT license. Third-party
 packages and assets retain their respective licenses; see
 THIRD_PARTY_NOTICES.md.

@@ -4,10 +4,8 @@ import argparse,io,json,re,urllib.error,urllib.request,zipfile
 from datetime import date
 from pathlib import Path
 COMPONENTS=(
- ("ragnavik-compat","Ragnavik_Compatibility","LostKode-Ragnavik_Compatibility","package/manifest.json"),
  ("ragnavik-ui","Ragnavik_UI","LostKode-Ragnavik_UI","package/manifest.json"),
- ("ragnavik-server-bridge","Ragnavik_Server_Bridge","LostKode-Ragnavik_Server_Bridge","package/manifest.json"),
- ("ragnavik-server-pack","Ragnavik_Server","LostKode-Ragnavik_Server","manifest.json"),)
+ ("ragnavik-shared-pack","Ragnavik_Shared","LostKode-Ragnavik_Shared","manifest.json"),)
 ROW=re.compile(r"^\|\s*(\d+\.\d+\.\d+)\s*\|\s*(.*?)\s*\|\s*$")
 def fail(message): raise SystemExit(message)
 def public_metadata(package):

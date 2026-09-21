@@ -22,6 +22,19 @@ def files_under(name: str, suffix: str | None = None) -> list[str]:
 
 
 manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
+shared_manifest = json.loads(
+    (ROOT / "inventories" / "shared-manifest.json").read_text(encoding="utf-8")
+)
+shared_pin = (
+    f"LostKode-{shared_manifest['name']}-{shared_manifest['version_number']}"
+)
+if shared_pin not in manifest["dependencies"]:
+    raise SystemExit(f"client manifest must depend on {shared_pin}")
+direct_dependencies = sorted(set(manifest["dependencies"]))
+shared_dependencies = sorted(set(shared_manifest["dependencies"]))
+effective_dependencies = sorted(
+    (set(direct_dependencies) - {shared_pin}) | set(shared_dependencies)
+)
 contract = json.loads((ROOT / "anti-cheat-contract.json").read_text(encoding="utf-8"))
 configs = [
     path
@@ -35,7 +48,9 @@ assets = [
 ]
 assets.append("icon.png")
 inventory = {
-    "dependencies": sorted(set(manifest["dependencies"])),
+    "direct_dependencies": direct_dependencies,
+    "shared_dependencies": shared_dependencies,
+    "effective_dependencies": effective_dependencies,
     "bundled_dlls": files_under("plugins", ".dll"),
     "bundled_plugin_guids": sorted(
         set(contract["bundled_client_plugins"].values())

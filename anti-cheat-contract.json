@@ -1,14 +1,24 @@
 {
   "client_only_dependencies": {
-    "LostKode-Ragnavik_UI": "lostkode.ragnavik.ui",
     "Advize-PlantEasily": "advize.PlantEasily",
+    "Azumatt-AAABuildMenu": "Azumatt.AAABuildMenu",
     "Azumatt-AAA_Crafting": "Azumatt.AzuAntiArthriticCrafting",
-    "Azumatt-Build_Camera_Custom_Hammers_Edition": "Azumatt.BuildCameraCHE",
-    "Azumatt-AzuClock": "Azumatt.AzuClock",
+    "Azumatt-AllPlaceable": "Azumatt.AllPlaceable",
     "Azumatt-AzuAreaRepair": "Azumatt.AzuAreaRepair",
-    "Neobotics-HUDCompass": "neobotics.valheim_mod.hudcompass",
+    "Azumatt-AzuClock": "Azumatt.AzuClock",
+    "Azumatt-Build_Camera_Custom_Hammers_Edition": "Azumatt.BuildCameraCHE",
+    "Azumatt-ItemCompare": "Azumatt.ItemCompare",
+    "Azumatt-MouseTweaks": "Azumatt.MouseTweaks",
+    "Azumatt-SaveCrossbowState": "Azumatt.SaveCrossbowState",
+    "Azumatt-TooltipExpansion": "Azumatt.TooltipExpansion",
+    "Azumatt-TrueInstantLootDrop": "Azumatt.TrueInstantLootDrop",
+    "Azumatt-Unshamed": "Azumatt.Unshamed",
     "ComfyMods-Chatter": "redseiko.valheim.chatter",
-    "Azumatt-Unshamed": "Azumatt.Unshamed"
+    "LostKode-Ragnavik_UI": "lostkode.ragnavik.ui",
+    "Neobotics-HUDCompass": "neobotics.valheim_mod.hudcompass",
+    "Smoothbrain-ShutUp": "org.bepinex.patchers.shutup",
+    "Smoothbrain-SoundOfSilence": "org.bepinex.plugins.soundofsilence",
+    "Smoothbrain-SteadyRegeneration": "org.bepinex.plugins.steadyregeneration"
   },
   "bundled_client_plugins": {}
 }

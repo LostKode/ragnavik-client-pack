@@ -46,6 +46,9 @@ def main() -> None:
         contract = json.loads(
             (ROOT / "anti-cheat-contract.json").read_text(encoding="utf-8")
         )
+        shared_manifest = json.loads(
+            (ROOT / "inventories/shared-manifest.json").read_text(encoding="utf-8")
+        )
     except (json.JSONDecodeError, UnicodeDecodeError) as error:
         fail(f"invalid JSON: {error}")
 
@@ -75,6 +78,25 @@ def main() -> None:
         f"{item['namespace']}-{item['name']}"
         for item in parsed
     }
+    shared_pin = (
+        f"LostKode-{shared_manifest['name']}-{shared_manifest['version_number']}"
+    )
+    if shared_pin not in manifest["dependencies"]:
+        fail(f"client manifest must depend on exact shared package {shared_pin}")
+    if shared_manifest.get("name") != "Ragnavik_Shared":
+        fail("stored shared manifest has the wrong package identity")
+    shared_keys = {
+        dependency.rsplit("-", 1)[0]
+        for dependency in shared_manifest.get("dependencies", [])
+    }
+    forbidden = {"Smoothbrain-Network", "LostKode-Ragnavik_Server_Bridge"}
+    leaked = sorted((client_keys | shared_keys) & forbidden)
+    if leaked:
+        fail(f"server-only dependencies leaked into the client: {leaked}")
+    direct_client_keys = client_keys - {"LostKode-Ragnavik_Shared"}
+    overlap = sorted(direct_client_keys & shared_keys)
+    if overlap:
+        fail(f"dependencies are owned by both Client and Shared: {overlap}")
     mappings = contract["client_only_dependencies"]
     invalid_keys = sorted(key for key in mappings if not PACKAGE_KEY.fullmatch(key))
     if invalid_keys:
@@ -82,6 +104,9 @@ def main() -> None:
     stale = sorted(set(mappings) - client_keys)
     if stale:
         fail(f"anti-cheat mapping references absent dependencies: {stale}")
+    missing = sorted(direct_client_keys - set(mappings))
+    if missing:
+        fail(f"client-only dependencies lack verified GUID mappings: {missing}")
 
     guids = list(mappings.values()) + list(contract["bundled_client_plugins"].values())
     if any(not isinstance(guid, str) or not guid.strip() for guid in guids):
