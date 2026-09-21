@@ -1,9 +1,8 @@
 {
-  "version": "1.1.41",
+  "version": "1.1.42",
   "publishedAt": "2026-09-21",
-  "title": "Update shared gameplay mods",
+  "title": "Update Jotunn and EpicLoot",
   "changes": [
-    "Require Ragnavik Shared 1.0.7 with Gameplay 1.0.1 and Jotunn 2.30.2.",
-    "Update OdinBanners to 1.1.14, OdinHorse to 1.7.3, KillMeForMyPower to 2.5.0, and Unshamed to 1.0.7."
+    "Require Ragnavik Shared 1.0.8 with Jotunn 2.30.2 and EpicLoot 0.14.11."
   ]
 }
