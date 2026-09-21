@@ -5,6 +5,7 @@
   "changes": [
     "Install shared gameplay dependencies through Ragnavik Shared.",
     "Keep client-only interface and convenience mods in the Client Pack.",
-    "Stop installing Network and Server Bridge on player clients."
+    "Stop installing Network and Server Bridge on player clients.",
+    "Test DedicatedServer 1.0.3 through the Shared Pack with matching client and server versions."
   ]
 }
