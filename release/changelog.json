@@ -1,10 +1,11 @@
 {
-  "version": "1.1.33",
+  "version": "1.1.34",
   "publishedAt": "2026-09-20",
-  "title": "Current gameplay tips",
+  "title": "Current UI and compatibility updates",
   "changes": [
-    "Replaced outdated loading tips with guidance for the current installed mods.",
-    "Removed tips for retired and replaced mods.",
-    "Added current profession, hotkey, progression, building, storage, travel, combat, companion, and food guidance."
+    "Moved all loading tips into Ragnavik UI as their sole owner.",
+    "Updated Ragnavik UI with current gameplay and death recovery guidance.",
+    "Updated Ragnavik Compatibility with spirit and Take All fixes.",
+    "Updated Odin's Kingdom and Zen ModLib with their latest fixes."
   ]
 }

@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.34  | Move all loading tips into Ragnavik UI as their sole owner and require Ragnavik UI 1.2.13. Update Ragnavik Compatibility to 1.0.3, Odin's Kingdom to 1.6.1, and Zen ModLib to 1.14.8. Retain FineWoodPieces 1.6.6 until its newer release is available on Hexium. |
 | 1.1.33  | Replace outdated loading tips with current player guidance for the installed mod set. Remove references to retired mods and document the current profession rules, hotkeys, progression systems, building tools, storage, travel, combat, companions, and food systems. |
 | 1.1.32  | Allow each player to pursue two professions. Permit profession changes once every 24 hours and reset an abandoned profession's level. Resolve confirmed hotkey conflicts across Professions, Passive Powers, HearthBelow, HUDCompass, SeidrChest, PerfectPlacement, ComfortTweaks, LootParticlePlus, and Farming. |
 | 1.1.31  | Update CookingAdditions to 1.3.3, FloraCollector to 1.1.4, MagicPlugin to 2.2.1, and OdinsFoodBarrels to 1.2.9. Retain FineWoodPieces 1.6.6 because it is already the latest Hexium release. Update Ragnavik UI to 1.2.10 so connection guidance no longer overlaps its action button. Configure Farming to retain profession progression while PlantEasily owns planting grids and bulk harvesting, and PlantEverything owns growth display and biome restrictions. |
