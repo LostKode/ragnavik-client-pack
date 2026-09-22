@@ -1,8 +1,8 @@
 {
-  "version": "1.1.42",
+  "version": "1.1.43",
   "publishedAt": "2026-09-21",
-  "title": "Update Jotunn and EpicLoot",
+  "title": "Add performance diagnostics",
   "changes": [
-    "Require Ragnavik Shared 1.0.8 with Jotunn 2.30.2 and EpicLoot 0.14.11."
+    "Require Ragnavik Shared 1.0.9 with Valheim Performance Profiler 0.1.0 for client and dedicated-server diagnostics."
   ]
 }
