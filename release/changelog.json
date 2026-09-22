@@ -1,6 +1,6 @@
 {
   "version": "1.1.43",
-  "publishedAt": "2026-09-21",
+  "publishedAt": "2026-09-22",
   "title": "Add performance diagnostics",
   "changes": [
     "Require Ragnavik Shared 1.0.9 with Valheim Performance Profiler 0.1.0 for client and dedicated-server diagnostics."
