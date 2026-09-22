@@ -1,8 +1,8 @@
 {
-  "version": "1.1.43",
+  "version": "1.1.44",
   "publishedAt": "2026-09-22",
-  "title": "Add performance diagnostics",
+  "title": "Restore starter chest interaction",
   "changes": [
-    "Require Ragnavik Shared 1.0.9 with Valheim Performance Profiler 0.1.0 for client and dedicated-server diagnostics."
+    "Require Ragnavik Shared 1.0.10 with Gameplay 1.0.2 to restore starter chest interaction and current Valheim API compatibility."
   ]
 }
