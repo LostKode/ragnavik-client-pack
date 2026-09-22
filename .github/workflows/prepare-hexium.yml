@@ -141,3 +141,4 @@ jobs:
           --repo LostKode/docker-swarm-configs
           --ref main
           -f server_ref=main
+          -f release_id=client-${{ github.run_id }}-$EXPECTED_VERSION
