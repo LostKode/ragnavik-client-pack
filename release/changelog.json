@@ -1,8 +1,8 @@
 {
-  "version": "1.1.47",
+  "version": "1.1.48",
   "publishedAt": "2026-09-22",
-  "title": "Update the shared gameplay package",
+  "title": "Allow ores through portals",
   "changes": [
-    "Require Ragnavik Shared 1.0.16 with the dedicated Ragnavik Gameplay package icon."
+    "Allow ores, metals, and other normally restricted items through TargetPortal portals."
   ]
 }
