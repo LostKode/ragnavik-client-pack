@@ -1,8 +1,8 @@
 {
-  "version": "1.1.48",
+  "version": "1.1.49",
   "publishedAt": "2026-09-22",
-  "title": "Allow ores through portals",
+  "title": "Refresh connection metadata",
   "changes": [
-    "Allow ores, metals, and other normally restricted items through TargetPortal portals."
+    "Require Ragnavik UI 1.2.14 with refreshed Production connection metadata."
   ]
 }
