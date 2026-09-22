@@ -1,8 +1,8 @@
 {
-  "version": "1.1.45",
+  "version": "1.1.46",
   "publishedAt": "2026-09-22",
-  "title": "Update the shared Ragnavik package",
+  "title": "Update six gameplay mods",
   "changes": [
-    "Require Ragnavik Shared 1.0.13 with Compatibility 1.0.8, the current performance profiler, seed bag configuration, and the available Startup Accelerator 1.0.3 release."
+    "Update WardIsLove to 4.0.4, Warfare to 1.9.4, Zen ModLib to 1.14.9, ZenRaids to 1.2.2, Resurrection to 1.0.15, and PlantEasily to 2.2.1."
   ]
 }
