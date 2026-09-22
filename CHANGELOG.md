@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.47  | Require Ragnavik Shared 1.0.16 with the dedicated Ragnavik Gameplay package icon. |
 | 1.1.46  | Update WardIsLove to 4.0.4, Warfare to 1.9.4, Zen ModLib to 1.14.9, ZenRaids to 1.2.2, Resurrection to 1.0.15, and PlantEasily to 2.2.1. Require Gameplay 1.0.3 with stronger starter chest protection and Compatibility 1.0.9 with durable Take All coverage. |
 | 1.1.45  | Require Ragnavik Shared 1.0.13 with Compatibility 1.0.8, the current performance profiler, seed bag configuration, and the available Startup Accelerator 1.0.3 release. |
 | 1.1.44  | Require Ragnavik Shared 1.0.10 with Gameplay 1.0.2 to restore starter chest interaction and current Valheim API compatibility. |
