@@ -1,8 +1,8 @@
 {
   "version": "1.1.46",
   "publishedAt": "2026-09-22",
-  "title": "Update six gameplay mods",
+  "title": "Update gameplay mods and protections",
   "changes": [
-    "Update WardIsLove to 4.0.4, Warfare to 1.9.4, Zen ModLib to 1.14.9, ZenRaids to 1.2.2, Resurrection to 1.0.15, and PlantEasily to 2.2.1."
+    "Update WardIsLove to 4.0.4, Warfare to 1.9.4, Zen ModLib to 1.14.9, ZenRaids to 1.2.2, Resurrection to 1.0.15, and PlantEasily to 2.2.1. Require Gameplay 1.0.3 with stronger starter chest protection and Compatibility 1.0.9 with durable Take All coverage."
   ]
 }
