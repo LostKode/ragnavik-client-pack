@@ -1,8 +1,8 @@
 {
-  "version": "1.1.49",
+  "version": "1.1.50",
   "publishedAt": "2026-09-22",
-  "title": "Refresh connection metadata",
+  "title": "Restore spirit home and grave access",
   "changes": [
-    "Require Ragnavik UI 1.2.14 with refreshed Production connection metadata."
+    "Require Ragnavik Shared 1.0.18 with Compatibility 1.0.11 so Afterdeath spirits can use permitted doors, resurrect at their assigned bed, and restore recovered items to their original quick slots."
   ]
 }
