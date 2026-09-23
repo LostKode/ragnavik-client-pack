@@ -1,11 +1,9 @@
 {
-  "version": "1.1.51",
-  "publishedAt": "2026-09-22",
-  "title": "Quieter wards and clearer controls",
+  "version": "1.1.52",
+  "publishedAt": "2026-09-23",
+  "title": "Safer automatic storage",
   "changes": [
-    "Remove the ZenRaids light perimeter hum while retaining lit fire spawn protection.",
-    "Reduce WardIsLove ward audio from 0.35 to 0.1.",
-    "Move the Explorer pin toggle to Alt+L while ItemDrawers keeps Alt+E.",
-    "Move Store All to Alt+S and Pause Auto Store to Alt+Shift+S."
+    "Preserve cooked food, magic reagents, upgrades, and other custom item data when items move into ItemDrawers.",
+    "Keep automatic storage and nearby pickup behavior consistent with ordinary drawer items."
   ]
 }
