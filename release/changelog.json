@@ -3,6 +3,9 @@
   "publishedAt": "2026-09-22",
   "title": "Quieter wards and clearer controls",
   "changes": [
-    "Require Ragnavik Shared 1.0.19. Remove the ZenRaids light perimeter hum, reduce WardIsLove audio, move the Explorer pin toggle to Alt+L, move Store All to Alt+S, and move Pause Auto Store to Alt+Shift+S."
+    "Remove the ZenRaids light perimeter hum while retaining lit fire spawn protection.",
+    "Reduce WardIsLove ward audio from 0.35 to 0.1.",
+    "Move the Explorer pin toggle to Alt+L while ItemDrawers keeps Alt+E.",
+    "Move Store All to Alt+S and Pause Auto Store to Alt+Shift+S."
   ]
 }
