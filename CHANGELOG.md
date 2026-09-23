@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.50  | Require Ragnavik Shared 1.0.18 with Compatibility 1.0.11 so Afterdeath spirits can use permitted doors, resurrect at their assigned bed, and restore recovered items to their original quick slots. |
 | 1.1.49  | Require Ragnavik UI 1.2.14 with refreshed Production connection metadata. |
 | 1.1.48  | Allow ores, metals, and other normally restricted items through TargetPortal portals. |
 | 1.1.47  | Require Ragnavik Shared 1.0.16 with the dedicated Ragnavik Gameplay package icon. |
