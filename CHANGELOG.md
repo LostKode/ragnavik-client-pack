@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.54 | Require Ragnavik Shared 1.0.22 with Compatibility 1.0.14 to restore hover prompts and interactions. |
 | 1.1.53  | Require Ragnavik Shared 1.0.21 with Compatibility 1.0.13, EpicLoot 0.14.12, OdinsFoodBarrels 1.3.1, Venture Location Reset 1.1.0, and TargetPortal 1.2.7. Keep FirstPersonMode 1.4.0 and the Hexium-available FineWoodPieces 1.6.6. |
 | 1.1.52  | Require Ragnavik Shared 1.0.20 with Compatibility 1.0.12 so ItemDrawers preserves cooked food, magic reagents, upgrades, and other custom item data during automatic storage and pickup. |
 | 1.1.51  | Require Ragnavik Shared 1.0.19. Remove the ZenRaids light perimeter hum, reduce WardIsLove audio, move the Explorer pin toggle to Alt+L, move Store All to Alt+S, and move Pause Auto Store to Alt+Shift+S. |
