@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.52  | Require Ragnavik Shared 1.0.20 with Compatibility 1.0.12 so ItemDrawers preserves cooked food, magic reagents, upgrades, and other custom item data during automatic storage and pickup. |
 | 1.1.51  | Require Ragnavik Shared 1.0.19. Remove the ZenRaids light perimeter hum, reduce WardIsLove audio, move the Explorer pin toggle to Alt+L, move Store All to Alt+S, and move Pause Auto Store to Alt+Shift+S. |
 | 1.1.50  | Require Ragnavik Shared 1.0.18 with Compatibility 1.0.11 so Afterdeath spirits can use permitted doors, resurrect at their assigned bed, and restore recovered items to their original quick slots. |
 | 1.1.49  | Require Ragnavik UI 1.2.14 with refreshed Production connection metadata. |
