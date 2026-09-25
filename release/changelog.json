@@ -1,10 +1,12 @@
 {
-  "version": "1.1.58",
+  "version": "1.1.59",
   "publishedAt": "2026-09-25",
-  "title": "Levels for missing creatures",
+  "title": "Collector XP and crafting updates",
   "changes": [
-    "Add levels and experience mappings for 60 previously uncovered creatures while preserving existing mod creature mappings.",
-    "Meadows skeletons display level 8, and wild Black Forest roots display level 15. Later-biome and sleeping variants follow the existing progression.",
-    "Summoned companions and offspring grant no kill XP. Require Shared 1.0.26 with Compatibility 1.0.17."
+    "Collecting from full or partial Flora Collectors grants Foraging XP per item, just like picking. Selected professions earn 100% skill XP; unselected professions earn 50%.",
+    "Fix cart-sign initialization with CraftyCarts and BoardersBumperBlurbs.",
+    "Include levels and experience mappings for 60 previously uncovered creatures. Meadows skeletons use level 8 and wild Black Forest roots use level 15; summoned companions and offspring grant no kill XP.",
+    "Update AzuCraftyBoxes to 1.8.24 and FirstPersonMode to 1.4.4.",
+    "Retain the farming XP, manual honey collection, profession-level retention, and crop-balance fixes from the preceding releases."
   ]
 }
