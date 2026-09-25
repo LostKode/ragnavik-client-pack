@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.55 | Require Ragnavik Shared 1.0.23. Disable LazyVikings beehive automation so honey remains in hives for manual collection. Include Compatibility 1.0.15 farming XP fixes, preserve unlearned profession levels, and moderate crop bonuses.  Update 16 shared dependencies; align with AAABuildMenu 1.0.6 and PlantEasily 2.2.2.  Include UI 1.2.15 with corrected farming and profession guidance. |
 | 1.1.54 | Require Ragnavik Shared 1.0.22 with Compatibility 1.0.14 to restore hover prompts and interactions. |
 | 1.1.53  | Require Ragnavik Shared 1.0.21 with Compatibility 1.0.13, EpicLoot 0.14.12, OdinsFoodBarrels 1.3.1, Venture Location Reset 1.1.0, and TargetPortal 1.2.7. Keep FirstPersonMode 1.4.0 and the Hexium-available FineWoodPieces 1.6.6. |
 | 1.1.52  | Require Ragnavik Shared 1.0.20 with Compatibility 1.0.12 so ItemDrawers preserves cooked food, magic reagents, upgrades, and other custom item data during automatic storage and pickup. |
