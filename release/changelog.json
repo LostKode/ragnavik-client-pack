@@ -1,12 +1,10 @@
 {
-  "version": "1.1.56",
+  "version": "1.1.57",
   "publishedAt": "2026-09-25",
-  "title": "Farming, honey, and mod updates",
+  "title": "Profession progress for everyone",
   "changes": [
-    "Keep honey in beehives for manual collection.",
-    "Restore base experience for harvesting and planting, including bulk farming actions, with corrected current-game compatibility.",
-    "Keep profession levels when changing professions, moderate crop bonuses, and retain normal cultivator stamina costs.",
-    "Update 18 mods, including EpicLoot item-loss and duplication fixes, CraftyCarts upgrades, building tools, and farming utilities.",
-    "Accept Frost Fir cones in seed bags."
+    "Earn 50% profession skill XP in professions you have not selected.",
+    "Selected professions earn normal skill XP. All professions retain the normal maximum level.",
+    "Keep earned profession levels when changing selections. Base character XP is unchanged."
   ]
 }
