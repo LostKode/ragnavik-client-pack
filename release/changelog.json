@@ -1,10 +1,10 @@
 {
-  "version": "1.1.55",
+  "version": "1.1.56",
   "publishedAt": "2026-09-25",
   "title": "Farming, honey, and mod updates",
   "changes": [
     "Keep honey in beehives for manual collection.",
-    "Restore base experience for harvesting and planting, including bulk farming actions.",
+    "Restore base experience for harvesting and planting, including bulk farming actions, with corrected current-game compatibility.",
     "Keep profession levels when changing professions, moderate crop bonuses, and retain normal cultivator stamina costs.",
     "Update 18 mods, including EpicLoot item-loss and duplication fixes, CraftyCarts upgrades, building tools, and farming utilities.",
     "Accept Frost Fir cones in seed bags."
