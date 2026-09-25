@@ -1,10 +1,10 @@
 {
-  "version": "1.1.57",
+  "version": "1.1.58",
   "publishedAt": "2026-09-25",
-  "title": "Profession progress for everyone",
+  "title": "Levels for missing creatures",
   "changes": [
-    "Earn 50% profession skill XP in professions you have not selected.",
-    "Selected professions earn normal skill XP. All professions retain the normal maximum level.",
-    "Keep earned profession levels when changing selections. Base character XP is unchanged."
+    "Add levels and experience mappings for 60 previously uncovered creatures while preserving existing mod creature mappings.",
+    "Meadows skeletons display level 8, and wild Black Forest roots display level 15. Later-biome and sleeping variants follow the existing progression.",
+    "Summoned companions and offspring grant no kill XP. Require Shared 1.0.26 with Compatibility 1.0.17."
   ]
 }
