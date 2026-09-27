@@ -1,10 +1,10 @@
 {
-  "version": "1.1.61",
+  "version": "1.1.62",
   "publishedAt": "2026-09-27",
-  "title": "Fourteen mod updates",
+  "title": "Compatibility fixes for the updated mods",
   "changes": [
-    "Update OdinArchitect, Server Devcommands, OdinsTraps, Venture Location Reset, FineWoodPieces, and ZenModLib.",
-    "Update Afterdeath, AzuExtendedPlayerInventory, Cooking, Groups, AzuCraftyBoxes, DualWield, WackyEpicMMOSystem, and Unshamed.",
-    "Install the complete Ragnavik 1.1.61 profile rather than updating individual mods."
+    "Keep Afterdeath spirit recovery and quick-slot grave recovery working with the updated mods.",
+    "Include pouch trading, backpack-key, and drawer-fed smelter fixes from Compatibility 1.0.23.",
+    "Install the complete Ragnavik 1.1.62 profile after the server update announcement."
   ]
 }
