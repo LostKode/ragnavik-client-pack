@@ -1,12 +1,11 @@
 {
-  "version": "1.1.59",
-  "publishedAt": "2026-09-25",
-  "title": "Collector XP and crafting updates",
+  "version": "1.1.60",
+  "publishedAt": "2026-09-27",
+  "title": "Eternal fires and easier storage",
   "changes": [
-    "Collecting from full or partial Flora Collectors grants Foraging XP per item, just like picking. Selected professions earn 100% skill XP; unselected professions earn 50%.",
-    "Fix cart-sign initialization with CraftyCarts and BoardersBumperBlurbs.",
-    "Include levels and experience mappings for 60 previously uncovered creatures. Meadows skeletons use level 8 and wild Black Forest roots use level 15; summoned companions and offspring grant no kill XP.",
-    "Update AzuCraftyBoxes to 1.8.24 and FirstPersonMode to 1.4.4.",
-    "Retain the farming XP, manual honey collection, profession-level retention, and crop-balance fixes from the preceding releases."
+    "Torches and other fueled fires stay lit without repeated manual refilling.",
+    "The manual auto-store command now reaches matching storage, including ItemDrawers, within 20 meters instead of 5 meters.",
+    "ItemDrawers keeps Shift+E for deposit all. The AzuCraftyBoxes chest inclusion toggle moves to Alt+C to remove the conflict.",
+    "Install the complete Ragnavik 1.1.60 profile rather than updating individual mods."
   ]
 }

@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.60 | Require Shared 1.0.28. Restore permanently fueled torches and fires, increase manual auto-store range to 20 meters, and move the CraftyBoxes container toggle to `Alt+C` so ItemDrawers keeps `Shift+E` for deposit all. |
 | 1.1.59 | Require Shared 1.0.27. Include Compatibility 1.0.19 for Foraging XP from full and partial collectors, cart-sign fixes, and expanded creature levels. Retain Gameplay 1.0.5: selected professions earn 100% skill XP and unselected professions earn 50%. Update AzuCraftyBoxes to 1.8.24 and FirstPersonMode to 1.4.4. |
 | 1.1.58 | Require Shared 1.0.26 with Compatibility 1.0.17. Add 60 missing EpicMMO creature mappings, including level-8 Meadows skeletons and level-15 wild Black Forest roots. Match later-biome and sleeping variants to existing progression; summoned companions and offspring grant no kill XP. |
 | 1.1.57 | Unselected professions earn 50% skill XP; selected professions earn 100%. Keep normal maximum levels and unchanged character XP. Update profession guidance. |
