@@ -1,11 +1,10 @@
 {
-  "version": "1.1.60",
+  "version": "1.1.61",
   "publishedAt": "2026-09-27",
-  "title": "Eternal fires and easier storage",
+  "title": "Fourteen mod updates",
   "changes": [
-    "Torches and other fueled fires stay lit without repeated manual refilling.",
-    "The manual auto-store command now reaches matching storage, including ItemDrawers, within 20 meters instead of 5 meters.",
-    "ItemDrawers keeps Shift+E for deposit all. The AzuCraftyBoxes chest inclusion toggle moves to Alt+C to remove the conflict.",
-    "Install the complete Ragnavik 1.1.60 profile rather than updating individual mods."
+    "Update OdinArchitect, Server Devcommands, OdinsTraps, Venture Location Reset, FineWoodPieces, and ZenModLib.",
+    "Update Afterdeath, AzuExtendedPlayerInventory, Cooking, Groups, AzuCraftyBoxes, DualWield, WackyEpicMMOSystem, and Unshamed.",
+    "Install the complete Ragnavik 1.1.61 profile rather than updating individual mods."
   ]
 }
