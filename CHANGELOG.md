@@ -2,6 +2,7 @@
 
 | Version  | Changes                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------|
+| 1.1.63 | Include UI 1.2.17: show a planned-maintenance disconnect notice directing players to Discord instead of a generic connection error. Shared mods are unchanged. |
 | 1.1.62 | Require Shared 1.0.30. Include Compatibility 1.0.23: retain spirit recovery, quick-slot grave recovery, and the EpicMMO reload guard with the updated mods. Include pouch trading, backpack-key, and drawer-fed smelter fixes. |
 | 1.1.61 | Require Shared 1.0.29 and update the 13 requested shared mods. Update Unshamed to 1.0.8. |
 | 1.1.60 | Require Shared 1.0.28. Restore permanently fueled torches and fires, increase manual auto-store range to 20 meters, and move the CraftyBoxes container toggle to `Alt+C` so ItemDrawers keeps `Shift+E` for deposit all. |
