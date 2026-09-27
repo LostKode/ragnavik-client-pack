@@ -1,10 +1,10 @@
 {
-  "version": "1.1.62",
+  "version": "1.1.63",
   "publishedAt": "2026-09-27",
-  "title": "Compatibility fixes for the updated mods",
+  "title": "Clear maintenance disconnect notices",
   "changes": [
-    "Keep Afterdeath spirit recovery and quick-slot grave recovery working with the updated mods.",
-    "Include pouch trading, backpack-key, and drawer-fed smelter fixes from Compatibility 1.0.23.",
-    "Install the complete Ragnavik 1.1.62 profile after the server update announcement."
+    "Planned maintenance disconnects now explain that Ragnavik is offline for maintenance and direct players to Discord for the live-again announcement.",
+    "Keep ordinary connection failures and mod-check rejections distinct from maintenance.",
+    "Includes UI 1.2.17. Shared gameplay mods are unchanged."
   ]
 }
