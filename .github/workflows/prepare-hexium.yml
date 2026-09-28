@@ -132,3 +132,13 @@ jobs:
           --changelog release/changelog.json
           --endpoint https://ragnavik.vercel.app/api/changelog
           --api-key "$CHANGELOG_API_KEY"
+      - name: Prepare locked Server deployment artifact
+        if: env.SKIP_RELEASE != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_AUTOMATION_TOKEN }}
+        run: >-
+          gh workflow run prepare-ragnavik-deployment.yml
+          --repo LostKode/docker-swarm-configs
+          --ref main
+          -f server_ref=main
+          -f release_id=client-${{ github.run_id }}-$EXPECTED_VERSION
